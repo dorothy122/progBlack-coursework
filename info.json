@@ -1,0 +1,238 @@
+[
+    {
+       "name": "Little Women 2019",
+       "type": "Movie",
+       "genre": "Hisotricl, Coming-of-age, Book Adaptation",
+       "streaming": "Netflix, Amazon Prime (for rent £3.49)",
+       "age rating": "12",
+
+       "image title": "Little Women 2019 movie poster",
+       "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
+    },
+    {
+        "name": "People We Meet On Vacation",
+        "type": "Movie",
+        "genre": "Romance, Comedy, Book Adaptation",
+        "streaming": "Netflix",
+        "age rating": "12",
+
+        "image title": "People We Meet On Vacation Movie poster",
+        "image": "https://moviesallaround.com/wp-content/uploads/2026/01/People-We-Meet-On-Vacation-Movie-Review-2026.jpg"
+
+
+    },
+    {
+        "name": "Pitch Perfect",
+        "type": "Movie",
+        "genre": "Comedy, Musical",
+        "streaming": "Netflix, Amazon (rent for £4.99)",
+        "age rating": "12",
+
+        "image title": "Pitch Perfect Movie Poster",
+        "image": "https://www.themoviedb.org/t/p/original/H78uA7tDGvDDSwWICx0aKpCpFi.jpg"
+    },
+    {
+       "name": "the Salt Path",
+       "type": "Movie",
+       "genre": "Biographical, Drama, Book Adaptation",
+       "streaming": "Amazon Prime",
+       "age rating": "12",
+
+       "image title": "the Salt Path Movie Poster",
+       "image": "https://image.tmdb.org/t/p/original/hxFVQwuY3frktKxG5ySY35o5MkO.jpg"
+
+    },
+    {
+        "name": "Bottoms",
+        "type": "Movie",
+        "genre":"Comedy, LGBTQ+, Young Adult",
+        "streaming": "Amazon Prime",
+        "age rating": "15",
+
+        "image title": "Bottoms Movie Poster",
+        "image": "https://image.tmdb.org/t/p/original/hMWzeRgamVykBnV3BU2Spu9D27U.jpg"
+    },
+    {
+        "name":"Fianl Destination 1",
+        "type": "Movie",
+        "genre": "Horror",
+        "streaming": "Amazon Prime",
+        "age rating": "15",
+
+        "image title": "Final Destination movie poster",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/99/Final_destination_09.jpg"
+    },
+    {
+        "name": "The Avengers",
+        "type": "Movie",
+        "genre": "Super Hero, Action",
+        "streaming": "Disney+",
+        "age rating": "12",
+
+        "image title": "The Avengers Movie Poster",
+        "image": "https://i.ebayimg.com/images/g/wy8AAOSwGMFcv5s2/s-l1200.jpg"
+    },
+    {
+        "name": "Twilight",
+        "type": "Movie",
+        "genre": "Fantasy, Romance, Book Adaptation",
+        "streaming": "Disney+, Amazon Prime",
+        "age rating": "12",
+
+        "image title": "Twilight Movie Poster",
+        "image": "https://static.posters.cz/image/1300/4601.jpg"
+    },
+    {
+        "name": "Shrek",
+        "type": "Movie",
+        "genre": "Action, Comedy, Kids",
+        "streaming": "Disney+, Amazon Prime",
+        "age rating": "PG",
+
+        "image title": "Shrek Movie Poster",
+        "image": "https://i.ebayimg.com/images/g/xzgAAOSwgHZYCrsb/s-l1200.jpg"
+    },
+    {
+        "name": "The Hunger Games",
+        "type": "Movie",
+        "genre": "Action, Dystopian, Young Adult, Book Adaptation",
+        "streaming": "Amazon Prime, IPlayer",
+        "age rating": "12",
+
+        "image title": "The Hunger Games Movie Poster",
+        "image": "https://i.ebayimg.com/00/s/MTYwMFgxMDgw/z/8UoAAOSwn8pbJQiQ/$_57.JPG?set_id=8800005007"
+    },
+    {
+        "name": "Paddington",
+        "type": "Movie",
+        "genre": "Comedy, Kids, Adventure, Book Adaptation",
+        "streaming": "Amazon Prime, IPlayer",
+        "age rating": "PG",
+
+        "image title": "Paddington Movie Poster",
+        "image": "https://m.media-amazon.com/images/I/81ajUVs6ddL._AC_UF894,1000_QL80_.jpg"
+    },
+
+    {
+        "name": "Bridgerton",
+        "type": "TV",
+        "genre": "Hsitorical, Romance, Book Adaptation",
+        "streaming": "Netflix",
+        "age rating": "15",
+
+        "image title": "Bridgerton poster",
+        "image": "https://f4.bcbits.com/img/a3602886462_10.jpg"
+    },
+    {
+        "name": "Taskmaster",
+        "type": "TV",
+        "genre": "Comedy, Gameshow",
+        "streaming": "Netflix, All4",
+        "age rating": "15",
+
+        "image title": "Taskmaster Poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BY2RmNmM1YzAtOWJlMi00NTdiLWEwN2MtNDliNGI3NmUxMTk3XkEyXkFqcGc@._V1_.jpg"
+    },
+    {
+        "name": "Motherland",
+        "type": "TV",
+        "genre": "Comedy",
+        "streaming": "IPlayer, Netflix",
+        "age rating": "15",
+
+        "image title": "Motherland poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BY2M5NTYyYzgtZGM1Ny00ZWZmLTgzMTUtMjdlZWVmNjQ1OTcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+        "name": "House M.D.",
+        "type": "TV",
+        "genre": "Drama",
+        "streaming": "Netflix, Amazon Prime",
+        "age rating": "15",
+
+        "image title": "House M.D. poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BMjgxYjAwNmMtYTAwZC00YmQxLWJlOTMtMWM0NGJmNDE0YmI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    },
+    {
+        "name": "The Summer I Turned Pretty",
+        "type": "TV",
+        "genre": "Young Adult, Romance, Book Adaptation",
+        "streaming": "Amazon Prime",
+        "age rating": "15",
+
+        "image title": "The Summer I Turned Pretty Poster",
+        "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p22096756_b_v13_aa.jpg"
+    },
+    {
+        "name": "Fleabag",
+        "type": "TV",
+        "genre": "Comedy",
+        "streaming": "Amazon Prime",
+        "age rating": "15",
+
+        "image title": "Feabag Poster",
+        "image": "https://resizing.flixster.com/IXWkCwJyyH0hL8Yqv0GqH2kKMRo=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13139614_b_v10_ac.jpg"
+    },
+    {
+        "name": "Daisy Jones and the Six",
+        "type": "TV",
+        "genre": "Hsitorical, Romance, Book Adaptation",
+        "streaming": "Amazon Prime",
+        "age rating": "15",
+
+        "image title": "Dasy Jones and the Six Poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BOTMwNzIzZDItYzYzYS00ZDA4LThiNmYtYTJjYjMwZTUxNTk1XkEyXkFqcGc@._V1_.jpg"
+    },
+    {
+        "name": "Peppa Pig",
+        "type": "TV",
+        "genre": "Kids",
+        "streaming": "Amazon Prime, Disney+, IPlayer",
+        "age rating": "U",
+
+        "image title": "Peppa Pig Poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BYmZjZWQ0OTktODdlYy00ZjA1LWJlNzYtNmYwMDc4YzQzZmQwXkEyXkFqcGc@._V1_.jpg"
+    },
+    {
+        "name": "Downton Abbey",
+        "type": "TV",
+        "genre": "Historical, Drama",
+        "streaming": "Disney+, Netflix, ITVX, Amazon Prime",
+        "age rating": "12",
+
+        "image title": "Downton Abbey Poster",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Downton_Abbey_Series_1.jpg/250px-Downton_Abbey_Series_1.jpg"
+    },
+    {
+        "name": "Normal People",
+        "type": "TV",
+        "genre": "Romance, Drama, Coming-of-age, Book Adaptation",
+        "streaming": "Disney+, Netlfix, IPlayer",
+        "age rating": "15",
+
+        "image title": "Normal People Poster",
+        "image": "https://play-lh.googleusercontent.com/TS5aBdWf1Z-Pvsh8bq24lX43a0jLOl5seQoDZve1OS4fVc-XnuJNaoJwwt481oGX8DS0bD7noCcuAjgCnoI"
+    },
+    {
+        "name": "Bluey",
+        "type": "TV",
+        "genre": "Kids",
+        "streaming": "Disney+, Bluey",
+        "age rating": "U",
+
+        "image title": "Bluey Poster",
+        "image": "https://media-cache.cinematerial.com/p/500x/gd18mdvl/bluey-video-on-demand-movie-cover.jpg?v=1704195187"
+    },
+    {
+        "name": "Traitors",
+        "type": "TV",
+        "genre": "Game show",
+        "streaming": "IPlayer",
+        "age rating": "15",
+
+        "image title": "the Traitors Poster",
+        "image": "https://m.media-amazon.com/images/M/MV5BODFlZTE3YzgtZDBkZC00NDA2LWI2OGQtZWQ5MGY4MmFjZTYxXkEyXkFqcGc@._V1_.jpg"
+    }
+]
+
+
