@@ -1,5 +1,5 @@
 window.addEventListener('click', function(event){
-  fetch('http://127.0.0.1:8080/list')
+  fetch('/list')
     .then(response => {
       if (!response.ok) {
         throw new Error("Server returned status " + response.status);
@@ -14,3 +14,5 @@ window.addEventListener('click', function(event){
         "<p style='color:red;'>Error: " + error.message + "</p>";
     });
 });
+
+// from practicle 10
