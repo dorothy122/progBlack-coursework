@@ -1,38 +1,45 @@
 // from practicle 10
 
-window.addEventListener('click', function(event){
+window.addEventListener('DOMContentLoaded', function(event){
   fetch('/list')
     .then(response => {
       if (!response.ok) {
         throw new Error("Server returned status " + response.status);
       }
-      return response.text();
+      return response.json();
     })
 
 
-    //.then(body => {
-    //  document.getElementById('content').innerHTML = body;
-    //})
-
     .then(data => {
       // run function to organise and display the data
-      displayContent(data)
+      displayImage(data)
+
     })
 
 })
 
-
 //
+
 
 // display the content nicely 
 
-function displayContent(info) {
+function displayImage(data) {
 
-// loop through the objects
+  // loop through the objects
+  for (let i = 0; i < data.length; i++) {
 
-    var arr = info
+    // create img element
+    const img = document.createElement('img');
 
+    // insert img attributes from the json file
+    img.src = data[i].image;
+    img.alt = data[i].imageTitle;
 
+    // display on webpage
+    document.getElementById('content').appendChild(img) 
+  
+
+  }
 
 }
 
