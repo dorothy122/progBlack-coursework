@@ -11,7 +11,19 @@ const info = require('./info.json');
 
 // send info to script.js
 app.get('/list', function(req, resp) {
-    resp.send(info);
+    // filter info
+
+    const summary = info.map( item => ({
+        type: item.type,
+        streaming: item.streaming,
+        image: item.image,
+        imageTitle: item.imageTitle
+
+    }));
+
+    // map function: https://www.w3tutorials.net/blog/nodejs-filter-map/#the-map-method
+
+    resp.send(summary);
 
 });
 
