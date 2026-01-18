@@ -2,18 +2,17 @@
 
 // 1. make images appear in bootstrap columns - needs editting - 6 columns over lap for certain window size
 // 2. DONE send only image info, type, title, streaming platforms 
-// 3. filter movie/tv show DONE MOVIES
-// 3.5 add styling to navbar buttons 
-// 4. filter streaming platforms
+// 3. DONE filter movie/tv show 
+// 3.5 add styling to navbar buttons DONE BUT DONT REALLY LIKE THAT MUCH
+// 4. add streaming platform drop down to navbar (instead of search)
+// 4.5 filter streaming platforms
 // 5. on click of image, enlarge to show extra info
 // 6. send additional info on click of image 
 
 
 
-
+// to gloablly store main info for items
 let allData = []
-
-
 
 
 // from practicle 10
