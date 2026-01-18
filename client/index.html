@@ -14,26 +14,90 @@
 
 
     <!-- nav bar - fixed at top of screen when scrol-->
-    <!-- using bootstrap template -->
-    <nav class = "navbar navbar-expand-sm fixed-top">
+    <!-- using bootstrap template <nav class = "navbar navbar-expand-sm fixed-top">-->
+    <nav class = "navbar navbar-expand-sm sticky-top">
         <div class = "container fluid">
-            
-            <ul class = "navbar-nav">
-                    <li class = "nav-item me-2">
-                        <button class="btn btn-outline-dark" type="button" id="home">Home</button>
-                    </li>
-                    <li class = "nav-item me-2">
-                        <button class="btn btn-outline-dark" type="button" id = "movies" >Movies</button>
-                    </li>
-                    <li class = "nav-item me-2">
-                        <button class="btn btn-outline-dark" type="button" id = "tv">Series</button>
-                </li>
-            </ul>
 
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-dark" type="button">Search</button>
-            </form>
+            <div class = "navbar-header">
+                <a class = "navbar-brand" href = "#">Name??</a>
+            </div>
+
+            <ul class = "nav navbar-nav">
+                <li class = "nav-item me-2">
+                    <button class="btn btn-outline-dark" type="button" id="home">All</button>
+                </li>
+                <li class = "nav-item me-2">
+                   <button class="btn btn-outline-dark" type="button" id = "movies" >Movies</button>
+                </li>
+                <li class = "nav-item me-2">
+                    <button class="btn btn-outline-dark" type="button" id = "tv">Series</button>
+                </li>
+
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Streaming Platforms
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                Netflix
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                Amazon Prime
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                Disney+
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                IPlayer
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">
+                                All4
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                ITVX
+                            </label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" value="" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">
+                                Amazon To Rent
+                            </label>
+                        </div>
+                        
+                        
+                        
+                        <!--
+                        <li><a class="dropdown-item" href="#">Netflix</a></li>
+                        <li><a class="dropdown-item" href="#">Amazon Prime</a></li>
+                        <li><a class="dropdown-item" href="#">Disney+</a></li>
+                        <li><a class="dropdown-item" href="#">IPlayer</a></li>
+                        <li><a class="dropdown-item" href="#">All4</a></li>
+                        <li><a class="dropdown-item" href="#">ITVX</a></li>
+                        <li><a class="dropdown-item" href="#">Amazon To Rent</a></li>
+                        -->
+                    </ul>
+                </div>
+
+
+            </ul>
         </div>
     </nav>
     <!---->

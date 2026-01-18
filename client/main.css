@@ -1,7 +1,12 @@
-html {
+/*html {
     padding-top: 150px;
     padding-left:60px;
     padding-right:60px;
+}
+*/
+
+#content {
+    padding-left:60px;
 }
 
 .navbar {
