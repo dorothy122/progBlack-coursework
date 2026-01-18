@@ -2,7 +2,8 @@
 
 // 1. make images appear in bootstrap columns - needs editting - 6 columns over lap for certain window size
 // 2. DONE send only image info, type, title, streaming platforms 
-// 3. filter movie/tv show
+// 3. filter movie/tv show DONE MOVIES
+// 3.5 add styling to navbar buttons 
 // 4. filter streaming platforms
 // 5. on click of image, enlarge to show extra info
 // 6. send additional info on click of image 
@@ -42,6 +43,15 @@ window.addEventListener('DOMContentLoaded', function(event){
   const moviesButton = document.getElementById("movies");
 
   moviesButton.addEventListener("click", () => {displayImage(allData.filter(item => item.type === "Movie")) })
+
+  // filter tv shows
+  const tvButton = document.getElementById("tv");
+
+  tvButton.addEventListener("click", () => {displayImage(allData.filter(item => item.type === "TV")) })
+
+  // filter home
+  const homeButton = this.document.getElementById("home");
+  homeButton.addEventListener("click", () => {displayImage(allData)})
 
 })
 
@@ -98,33 +108,6 @@ function displayImage(data) {
     content.appendChild(container)
 
 }
-
-// event listener for click movies, 
-
-
-
-
-// click tv shows, 
-
-
-
-
-// filter genres, 
-
-
-
-
-
-// filter age rating, 
-
-
-
-
-
-
-// filter streaming platforms
-
-
 
 
 
