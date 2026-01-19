@@ -6,7 +6,7 @@
 // 3.5 DONE add styling to navbar buttons BUT DONT REALLY LIKE THAT MUCH
 // 4. DONE add streaming platform drop down to navbar (instead of search)
 // 4.5 DONE filter streaming platforms
-// 5. on click of image, enlarge to show extra info
+// 5. on hover of image, enlarge to show extra info
 // 6. send additional info on click of image 
 
 
@@ -89,18 +89,56 @@ window.addEventListener('DOMContentLoaded', function(event){
   })
 
 
+  // when click on image, fetch additional info for this item
+  this.document.getElementById("content").addEventListener("click", (event) => {
+    if (event.target.tagName == "IMG") {
+      // get image names
+      const title = event.target.alt
+      
+      // request info
+      // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
+      fetch('/list/single', {
+        method:"POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ title })
+      })
+
+      // if not recieved
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Server returned status " + response.status);
+        }
+        return response.json();
+      })
+
+      // if recieved, enlarge item
+      .then(data => {
+        displayImage([data])
+
+      })
+    }
+  })
+
+
+
+
 })
 
 
-// on click of image, enlarge image and display additional info
+// on hover of image, enlarge image and display additional info
+function enlarge(title) {
+  // enlarge image
+
+
+
+}
 
 
 
 
 
 
-
-
+ 
 
 
 

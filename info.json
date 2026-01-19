@@ -6,7 +6,7 @@
        "streaming": "Netflix, AmazonForRent",
        "ageRating": "12",
 
-       "imageTitle": "Little Women 2019 movie poster",
+       "imageTitle": "Little Women 2019",
        "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
     },
     {
@@ -16,7 +16,7 @@
         "streaming": "Netflix",
         "ageRating": "12",
 
-        "imageTitle": "People We Meet On Vacation Movie poster",
+        "imageTitle": "People We Meet On Vacation",
         "image": "https://moviesallaround.com/wp-content/uploads/2026/01/People-We-Meet-On-Vacation-Movie-Review-2026.jpg"
 
 
@@ -28,7 +28,7 @@
         "streaming": "Netflix, AmazonForRent",
         "ageRating": "12",
 
-        "imageTitle": "Pitch Perfect Movie Poster",
+        "imageTitle": "Pitch Perfect",
         "image": "https://www.themoviedb.org/t/p/original/H78uA7tDGvDDSwWICx0aKpCpFi.jpg"
     },
     {
@@ -38,7 +38,7 @@
        "streaming": "Amazon Prime",
        "ageRating": "12",
 
-       "imageTitle": "the Salt Path Movie Poster",
+       "imageTitle": "the Salt Path",
        "image": "https://image.tmdb.org/t/p/original/hxFVQwuY3frktKxG5ySY35o5MkO.jpg"
 
     },
@@ -49,7 +49,7 @@
         "streaming": "Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "Bottoms Movie Poster",
+        "imageTitle": "Bottoms",
         "image": "https://image.tmdb.org/t/p/original/hMWzeRgamVykBnV3BU2Spu9D27U.jpg"
     },
     {
@@ -59,7 +59,7 @@
         "streaming": "Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "Final Destination movie poster",
+        "imageTitle": "Final Destination",
         "image": "https://upload.wikimedia.org/wikipedia/en/9/99/Final_destination_09.jpg"
     },
     {
@@ -69,7 +69,7 @@
         "streaming": "Disney+",
         "ageRating": "12",
 
-        "imageTitle": "The Avengers Movie Poster",
+        "imageTitle": "The Avengers",
         "image": "https://i.ebayimg.com/images/g/wy8AAOSwGMFcv5s2/s-l1200.jpg"
     },
     {
@@ -79,7 +79,7 @@
         "streaming": "Disney+, Amazon Prime",
         "ageRating": "12",
 
-        "imageTitle": "Twilight Movie Poster",
+        "imageTitle": "Twilight",
         "image": "https://static.posters.cz/image/1300/4601.jpg"
     },
     {
@@ -89,7 +89,7 @@
         "streaming": "Disney+, Amazon Prime",
         "ageRating": "PG",
 
-        "imageTitle": "Shrek Movie Poster",
+        "imageTitle": "Shrek",
         "image": "https://i.ebayimg.com/images/g/xzgAAOSwgHZYCrsb/s-l1200.jpg"
     },
     {
@@ -99,7 +99,7 @@
         "streaming": "Amazon Prime, IPlayer",
         "ageRating": "12",
 
-        "imageTitle": "The Hunger Games Movie Poster",
+        "imageTitle": "The Hunger Games",
         "image": "https://i.ebayimg.com/00/s/MTYwMFgxMDgw/z/8UoAAOSwn8pbJQiQ/$_57.JPG?set_id=8800005007"
     },
     {
@@ -109,7 +109,7 @@
         "streaming": "Amazon Prime, IPlayer",
         "ageRating": "PG",
 
-        "imageTitle": "Paddington Movie Poster",
+        "imageTitle": "Paddington",
         "image": "https://m.media-amazon.com/images/I/81ajUVs6ddL._AC_UF894,1000_QL80_.jpg"
     },
 
@@ -120,7 +120,7 @@
         "streaming": "Netflix",
         "ageRating": "15",
 
-        "imageTitle": "Bridgerton poster",
+        "imageTitle": "Bridgerton",
         "image": "https://f4.bcbits.com/img/a3602886462_10.jpg"
     },
     {
@@ -130,7 +130,7 @@
         "streaming": "Netflix, All4",
         "ageRating": "15",
 
-        "imageTitle": "Taskmaster Poster",
+        "imageTitle": "Taskmaster",
         "image": "https://m.media-amazon.com/images/M/MV5BY2RmNmM1YzAtOWJlMi00NTdiLWEwN2MtNDliNGI3NmUxMTk3XkEyXkFqcGc@._V1_.jpg"
     },
     {
@@ -140,7 +140,7 @@
         "streaming": "IPlayer, Netflix",
         "ageRating": "15",
 
-        "imageTitle": "Motherland poster",
+        "imageTitle": "Motherland",
         "image": "https://m.media-amazon.com/images/M/MV5BY2M5NTYyYzgtZGM1Ny00ZWZmLTgzMTUtMjdlZWVmNjQ1OTcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
@@ -150,7 +150,7 @@
         "streaming": "Netflix, Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "House M.D. poster",
+        "imageTitle": "House M.D.",
         "image": "https://m.media-amazon.com/images/M/MV5BMjgxYjAwNmMtYTAwZC00YmQxLWJlOTMtMWM0NGJmNDE0YmI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
     },
     {
@@ -160,7 +160,7 @@
         "streaming": "Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "The Summer I Turned Pretty Poster",
+        "imageTitle": "The Summer I Turned Pretty",
         "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p22096756_b_v13_aa.jpg"
     },
     {
@@ -170,7 +170,7 @@
         "streaming": "Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "Feabag Poster",
+        "imageTitle": "Feabag",
         "image": "https://resizing.flixster.com/IXWkCwJyyH0hL8Yqv0GqH2kKMRo=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13139614_b_v10_ac.jpg"
     },
     {
@@ -180,7 +180,7 @@
         "streaming": "Amazon Prime",
         "ageRating": "15",
 
-        "imageTitle": "Dasy Jones and the Six Poster",
+        "imageTitle": "Dasy Jones and the Six",
         "image": "https://m.media-amazon.com/images/M/MV5BOTMwNzIzZDItYzYzYS00ZDA4LThiNmYtYTJjYjMwZTUxNTk1XkEyXkFqcGc@._V1_.jpg"
     },
     {
@@ -190,7 +190,7 @@
         "streaming": "Amazon Prime, Disney+, IPlayer",
         "ageRating": "U",
 
-        "imageTitle": "Peppa Pig Poster",
+        "imageTitle": "Peppa Pig",
         "image": "https://m.media-amazon.com/images/M/MV5BYmZjZWQ0OTktODdlYy00ZjA1LWJlNzYtNmYwMDc4YzQzZmQwXkEyXkFqcGc@._V1_.jpg"
     },
     {
@@ -200,7 +200,7 @@
         "streaming": "Disney+, Netflix, ITVX, Amazon Prime",
         "ageRating": "12",
 
-        "imageTitle": "Downton Abbey Poster",
+        "imageTitle": "Downton Abbey",
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Downton_Abbey_Series_1.jpg/250px-Downton_Abbey_Series_1.jpg"
     },
     {
@@ -210,7 +210,7 @@
         "streaming": "Disney+, Netlfix, IPlayer",
         "ageRating": "15",
 
-        "imageTitle": "Normal People Poster",
+        "imageTitle": "Normal People",
         "image": "https://image.tmdb.org/t/p/w1280/c4mk4EQVIM11yd3W43DDdqDazDU.jpg"
     },
     {
@@ -220,7 +220,7 @@
         "streaming": "Disney+, Bluey",
         "ageRating": "U",
 
-        "imageTitle": "Bluey Poster",
+        "imageTitle": "Bluey",
         "image": "https://media-cache.cinematerial.com/p/500x/gd18mdvl/bluey-video-on-demand-movie-cover.jpg?v=1704195187"
     },
     {
@@ -230,7 +230,7 @@
         "streaming": "IPlayer",
         "ageRating": "15",
 
-        "imageTitle": "the Traitors Poster",
+        "imageTitle": "the Traitors",
         "image": "https://m.media-amazon.com/images/M/MV5BODFlZTE3YzgtZDBkZC00NDA2LWI2OGQtZWQ5MGY4MmFjZTYxXkEyXkFqcGc@._V1_.jpg"
     }
 ]
