@@ -3,7 +3,7 @@
        "name": "Little Women 2019",
        "type": "Movie",
        "genre": "Hisotricl, Coming-of-age, Book Adaptation",
-       "streaming": "Netflix, Amazon Prime (for rent £3.49)",
+       "streaming": "Netflix, AmazonForRent",
        "ageRating": "12",
 
        "imageTitle": "Little Women 2019 movie poster",
@@ -25,7 +25,7 @@
         "name": "Pitch Perfect",
         "type": "Movie",
         "genre": "Comedy, Musical",
-        "streaming": "Netflix, Amazon (rent for £4.99)",
+        "streaming": "Netflix, AmazonForRent",
         "ageRating": "12",
 
         "imageTitle": "Pitch Perfect Movie Poster",

@@ -20,7 +20,7 @@ let series = true
 
 // globally store state of each platform filter
 let filters = {
-  netflix:true, prime:true, disney:true
+  netflix:true, prime:true, disney:true, iplayer:true, all4:true, itvx:true, amazonRent:true
 }
 
 
@@ -74,12 +74,39 @@ window.addEventListener('DOMContentLoaded', function(event){
   })
   document.getElementById("disney").addEventListener("click", () => {
     filters.disney = !filters.disney
+  })
+  document.getElementById("iplayer").addEventListener("click", () => {
+    filters.iplayer = !filters.iplayer
   })  
+  document.getElementById("all4").addEventListener("click", () => {
+    filters.all4 = !filters.all4
+  })
+  document.getElementById("itvx").addEventListener("click", () => {
+    filters.itvx = !filters.itvx
+  })
+  document.getElementById("amazonRent").addEventListener("click", () => {
+    filters.amazonRent = !filters.amazonRent
+  })
+
 
 })
 
 
+// on click of image, enlarge image and display additional info
 
+
+
+
+
+
+
+
+
+
+
+
+
+// apply any filter changes 
 function applyFilters(data) {
   // store available items
   let filteredData = []
@@ -110,18 +137,39 @@ function applyFilters(data) {
       available = true
     }
 
+    if (filters.all4 == true && data[i].streaming.includes("All4")) {
+      available = true
+    }
+
+    if (filters.iplayer == true && data[i].streaming.includes("IPlayer")) {
+      available = true
+    }
+
+    if (filters.itvx == true && data[i].streaming.includes("ITVX")) {
+      available = true
+    }
+
+    if (filters.disney == true && data[i].streaming.includes("Disney+")) {
+      available = true
+    }
+
+    if (filters.amazonRent == true && data[i].streaming.includes("AmazonForRent")) {
+      available = true
+    }
+
     // if not available, remove item from data
     if (available == true && availableType == true) {
       filteredData.push(data[i])
     }
   }
 
+  // display available items
   displayImage(filteredData)
 }
 
 
 
-// display the image content nicely 
+// display the image content  
 function displayImage(data) {
   // display in bootstrap container 
     
