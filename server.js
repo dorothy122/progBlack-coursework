@@ -29,6 +29,6 @@ app.get('/list', function(req, resp) {
 
 
 
-// http://localhost:8090/list
+// http://localhost:8090/
 app.listen(8090);
 
