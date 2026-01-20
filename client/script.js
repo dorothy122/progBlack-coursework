@@ -133,11 +133,21 @@ function enlarge(data) {
   const card = document.createElement('div')
   card.className = "card"
 
+  // make horizontal car
+  const row = document.createElement("div")
+  row.className = "row g-0"
+  const imgCol = document.createElement("div")
+  imgCol.className = "col"
+  const textCol = document.createElement("div")
+  textCol.className = "col"
+
   const img = document.createElement("img")
-  img.className = "card-img-top"
+  img.className = "img-fluid rounded start"
   // insert img attributes from the json file
   img.src = data.image
   img.alt = data.imageTitle
+  // add img to image column 
+  imgCol.appendChild(img)
 
   const body = document.createElement("div")
   body.className = "card-body"
@@ -151,11 +161,17 @@ function enlarge(data) {
   text.className = "card-text"
   text.textContent = data.genre
 
-  // add content to card 
-  card.appendChild(img)
+  // add text to text column  
   body.appendChild(title)
   body.appendChild(text)
-  card.appendChild(body)
+  textCol.appendChild(body)
+  
+  // add columns to row
+  row.appendChild(imgCol)
+  row.appendChild(textCol)
+
+  // add row to card
+  card.appendChild(row)
 
   // add car to page
   content.appendChild(card)

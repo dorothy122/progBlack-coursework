@@ -1,12 +1,8 @@
-/*html {
-    padding-top: 150px;
-    padding-left:60px;
-    padding-right:60px;
-}
-*/
+
 
 #content {
     padding-left:60px;
+    padding-top:25px;
 }
 
 .navbar {
@@ -25,6 +21,7 @@ button {
 }
 
 .card {
-    width: 15rem
+    width: 25rem;
 }
+
 
