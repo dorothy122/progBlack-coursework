@@ -6,8 +6,8 @@
 // 3.5 DONE add styling to navbar buttons BUT DONT REALLY LIKE THAT MUCH
 // 4. DONE add streaming platform drop down to navbar (instead of search)
 // 4.5 DONE filter streaming platforms
-// 5. on hover of image, enlarge to show extra info
-// 6. send additional info on click of image 
+// 5. on click of image, enlarge to show extra info
+// 6. DONE send additional info on click of image 
 
 
 
@@ -113,7 +113,7 @@ window.addEventListener('DOMContentLoaded', function(event){
 
       // if recieved, enlarge item
       .then(data => {
-        displayImage([data])
+        enlarge(data)
 
       })
     }
@@ -125,11 +125,40 @@ window.addEventListener('DOMContentLoaded', function(event){
 })
 
 
-// on hover of image, enlarge image and display additional info
-function enlarge(title) {
-  // enlarge image
+// on click of image, enlarge image and display additional info
+function enlarge(data) {
+  const content = document.getElementById("content")
+  content.innerHTML = ""; // clear existing content for time being 
 
+  const card = document.createElement('div')
+  card.className = "card"
 
+  const img = document.createElement("img")
+  img.className = "card-img-top"
+  // insert img attributes from the json file
+  img.src = data.image
+  img.alt = data.imageTitle
+
+  const body = document.createElement("div")
+  body.className = "card-body"
+
+  const title = document.createElement("h5")
+  title.className = "card-title"
+  // add actual content 
+  title.textContent = data.name
+
+  const text = document.createElement("p")
+  text.className = "card-text"
+  text.textContent = data.genre
+
+  // add content to card 
+  card.appendChild(img)
+  body.appendChild(title)
+  body.appendChild(text)
+  card.appendChild(body)
+
+  // add car to page
+  content.appendChild(card)
 
 }
 
