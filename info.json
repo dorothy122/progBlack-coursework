@@ -2,9 +2,10 @@
     {
        "name": "Little Women 2019",
        "type": "Movie",
-       "genre": "Hisotricl, Coming-of-age, Book Adaptation",
+       "genre": "Hisotrical, Coming-of-age, Book Adaptation",
        "streaming": "Netflix, AmazonForRent",
        "ageRating": "12",
+       "description": "Determined to make her own way in the 1860s, a writer looks back at the tough yet tender times spent with her three spriited sisters and a close friend",
 
        "imageTitle": "Little Women 2019",
        "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
@@ -15,6 +16,7 @@
         "genre": "Romance, Comedy, Book Adaptation",
         "streaming": "Netflix",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "People We Meet On Vacation",
         "image": "https://moviesallaround.com/wp-content/uploads/2026/01/People-We-Meet-On-Vacation-Movie-Review-2026.jpg"
@@ -27,6 +29,7 @@
         "genre": "Comedy, Musical",
         "streaming": "Netflix, AmazonForRent",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "Pitch Perfect",
         "image": "https://www.themoviedb.org/t/p/original/H78uA7tDGvDDSwWICx0aKpCpFi.jpg"
@@ -37,6 +40,7 @@
        "genre": "Biographical, Drama, Book Adaptation",
        "streaming": "Amazon Prime",
        "ageRating": "12",
+       "description": "",
 
        "imageTitle": "the Salt Path",
        "image": "https://image.tmdb.org/t/p/original/hxFVQwuY3frktKxG5ySY35o5MkO.jpg"
@@ -48,6 +52,7 @@
         "genre":"Comedy, LGBTQ+, Young Adult",
         "streaming": "Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Bottoms",
         "image": "https://image.tmdb.org/t/p/original/hMWzeRgamVykBnV3BU2Spu9D27U.jpg"
@@ -58,6 +63,7 @@
         "genre": "Horror",
         "streaming": "Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Final Destination",
         "image": "https://upload.wikimedia.org/wikipedia/en/9/99/Final_destination_09.jpg"
@@ -68,6 +74,7 @@
         "genre": "Super Hero, Action",
         "streaming": "Disney+",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "The Avengers",
         "image": "https://i.ebayimg.com/images/g/wy8AAOSwGMFcv5s2/s-l1200.jpg"
@@ -78,6 +85,7 @@
         "genre": "Fantasy, Romance, Book Adaptation",
         "streaming": "Disney+, Amazon Prime",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "Twilight",
         "image": "https://static.posters.cz/image/1300/4601.jpg"
@@ -88,6 +96,7 @@
         "genre": "Action, Comedy, Kids",
         "streaming": "Disney+, Amazon Prime",
         "ageRating": "PG",
+        "description": "",
 
         "imageTitle": "Shrek",
         "image": "https://i.ebayimg.com/images/g/xzgAAOSwgHZYCrsb/s-l1200.jpg"
@@ -98,6 +107,7 @@
         "genre": "Action, Dystopian, Young Adult, Book Adaptation",
         "streaming": "Amazon Prime, IPlayer",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "The Hunger Games",
         "image": "https://i.ebayimg.com/00/s/MTYwMFgxMDgw/z/8UoAAOSwn8pbJQiQ/$_57.JPG?set_id=8800005007"
@@ -108,6 +118,7 @@
         "genre": "Comedy, Kids, Adventure, Book Adaptation",
         "streaming": "Amazon Prime, IPlayer",
         "ageRating": "PG",
+        "description": "",
 
         "imageTitle": "Paddington",
         "image": "https://m.media-amazon.com/images/I/81ajUVs6ddL._AC_UF894,1000_QL80_.jpg"
@@ -119,6 +130,7 @@
         "genre": "Hsitorical, Romance, Book Adaptation",
         "streaming": "Netflix",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Bridgerton",
         "image": "https://f4.bcbits.com/img/a3602886462_10.jpg"
@@ -129,6 +141,7 @@
         "genre": "Comedy, Gameshow",
         "streaming": "Netflix, All4",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Taskmaster",
         "image": "https://m.media-amazon.com/images/M/MV5BY2RmNmM1YzAtOWJlMi00NTdiLWEwN2MtNDliNGI3NmUxMTk3XkEyXkFqcGc@._V1_.jpg"
@@ -139,6 +152,7 @@
         "genre": "Comedy",
         "streaming": "IPlayer, Netflix",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Motherland",
         "image": "https://m.media-amazon.com/images/M/MV5BY2M5NTYyYzgtZGM1Ny00ZWZmLTgzMTUtMjdlZWVmNjQ1OTcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
@@ -149,6 +163,7 @@
         "genre": "Drama",
         "streaming": "Netflix, Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "House M.D.",
         "image": "https://m.media-amazon.com/images/M/MV5BMjgxYjAwNmMtYTAwZC00YmQxLWJlOTMtMWM0NGJmNDE0YmI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
@@ -159,6 +174,7 @@
         "genre": "Young Adult, Romance, Book Adaptation",
         "streaming": "Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "The Summer I Turned Pretty",
         "image": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p22096756_b_v13_aa.jpg"
@@ -169,6 +185,7 @@
         "genre": "Comedy",
         "streaming": "Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Feabag",
         "image": "https://resizing.flixster.com/IXWkCwJyyH0hL8Yqv0GqH2kKMRo=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13139614_b_v10_ac.jpg"
@@ -179,6 +196,7 @@
         "genre": "Hsitorical, Romance, Book Adaptation",
         "streaming": "Amazon Prime",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Dasy Jones and the Six",
         "image": "https://m.media-amazon.com/images/M/MV5BOTMwNzIzZDItYzYzYS00ZDA4LThiNmYtYTJjYjMwZTUxNTk1XkEyXkFqcGc@._V1_.jpg"
@@ -189,6 +207,7 @@
         "genre": "Kids",
         "streaming": "Amazon Prime, Disney+, IPlayer",
         "ageRating": "U",
+        "description": "",
 
         "imageTitle": "Peppa Pig",
         "image": "https://m.media-amazon.com/images/M/MV5BYmZjZWQ0OTktODdlYy00ZjA1LWJlNzYtNmYwMDc4YzQzZmQwXkEyXkFqcGc@._V1_.jpg"
@@ -199,6 +218,7 @@
         "genre": "Historical, Drama",
         "streaming": "Disney+, Netflix, ITVX, Amazon Prime",
         "ageRating": "12",
+        "description": "",
 
         "imageTitle": "Downton Abbey",
         "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Downton_Abbey_Series_1.jpg/250px-Downton_Abbey_Series_1.jpg"
@@ -209,6 +229,7 @@
         "genre": "Romance, Drama, Coming-of-age, Book Adaptation",
         "streaming": "Disney+, Netlfix, IPlayer",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "Normal People",
         "image": "https://image.tmdb.org/t/p/w1280/c4mk4EQVIM11yd3W43DDdqDazDU.jpg"
@@ -219,6 +240,7 @@
         "genre": "Kids",
         "streaming": "Disney+, Bluey",
         "ageRating": "U",
+        "description": "",
 
         "imageTitle": "Bluey",
         "image": "https://media-cache.cinematerial.com/p/500x/gd18mdvl/bluey-video-on-demand-movie-cover.jpg?v=1704195187"
@@ -229,6 +251,7 @@
         "genre": "Game show",
         "streaming": "IPlayer",
         "ageRating": "15",
+        "description": "",
 
         "imageTitle": "the Traitors",
         "image": "https://m.media-amazon.com/images/M/MV5BODFlZTE3YzgtZDBkZC00NDA2LWI2OGQtZWQ5MGY4MmFjZTYxXkEyXkFqcGc@._V1_.jpg"

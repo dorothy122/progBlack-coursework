@@ -133,45 +133,92 @@ function enlarge(data) {
   const card = document.createElement('div')
   card.className = "card"
 
-  // make horizontal car
-  const row = document.createElement("div")
-  row.className = "row g-0"
+  // make horizontal card
+
+  // row1 -- // imgCol  // textCol //
+  // row2 -- //    titleCol        //
+
+  // set up format
+  const row1 = document.createElement("div")
+  row1.className = "row g-0"
+  const row2 = document.createElement("div")
+  row2.className = "row g-0"
   const imgCol = document.createElement("div")
   imgCol.className = "col"
   const textCol = document.createElement("div")
   textCol.className = "col"
+  const titleCol = document.createElement("div")
+  titleCol.className = "col"
 
+  // add image 
   const img = document.createElement("img")
-  img.className = "img-fluid rounded start"
+  img.className = "img-fluid rounded-start"
   // insert img attributes from the json file
   img.src = data.image
   img.alt = data.imageTitle
   // add img to image column 
   imgCol.appendChild(img)
 
-  const body = document.createElement("div")
-  body.className = "card-body"
+
+
+  // add extra details 
+  const body1 = document.createElement("div")
+  body1.className = "card-body"
+
+    //card list  group
+  const listGroup = document.createElement("ul")
+  listGroup.className = "list-group list-group-flush"
+
+  const list1 = document.createElement("li") // genre
+  list1.className = "list-group-item"
+  list1.innerHTML = `<strong>Genre: </strong>${data.genre}`
+  const list2 = document.createElement("li") // age rating
+  list2.className = "list-group-item"
+  list2.innerHTML = `<strong>Age Rating: </strong>${data.ageRating}`
+  const list3 = document.createElement("li") // available on 
+  list3.className = "list-group-item"
+  list3.innerHTML = `<strong>Available on: </strong>${data.streaming}`
+
+  listGroup.appendChild(list1)
+  listGroup.appendChild(list2)
+  listGroup.appendChild(list3)
+
+  body1.appendChild(listGroup)
+  textCol.appendChild(body1)
+
+  // create row1
+  row1.appendChild(imgCol)
+  row1.appendChild(textCol)
+  
+
+  // add title and description to row 2
+  const body2 = document.createElement("div")
+  body2.className = "card-body"
 
   const title = document.createElement("h5")
   title.className = "card-title"
-  // add actual content 
   title.textContent = data.name
 
   const text = document.createElement("p")
   text.className = "card-text"
-  text.textContent = data.genre
+  text.textContent = data.description
 
-  // add text to text column  
-  body.appendChild(title)
-  body.appendChild(text)
-  textCol.appendChild(body)
-  
-  // add columns to row
-  row.appendChild(imgCol)
-  row.appendChild(textCol)
+  // add divider before row2
+  const divider = document.createElement("hr") 
+  divider.className = "hr"
 
-  // add row to card
-  card.appendChild(row)
+  body2.appendChild(divider)
+  body2.appendChild(title)
+  body2.appendChild(text)
+
+  // construct row
+  titleCol.appendChild(body2)
+  row2.appendChild(titleCol)
+
+
+  // add rows to card
+  card.appendChild(row1)
+  card.appendChild(row2)
 
   // add car to page
   content.appendChild(card)

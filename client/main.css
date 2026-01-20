@@ -1,7 +1,8 @@
 
 
 #content {
-    padding-left:60px;
+    padding-left:25px;
+    padding-right:25px;
     padding-top:25px;
 }
 
@@ -20,8 +21,14 @@ button {
     margin-right: 10px;
 }
 
+
 .card {
     width: 25rem;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    background-color: darkgrey;
 }
+
+
 
 
