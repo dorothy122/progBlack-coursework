@@ -17,6 +17,7 @@ app.get('/list', function(req, resp) {
     // filter info
 
     const summary = info.map( item => ({
+        name: item.name,
         type: item.type,
         streaming: item.streaming,
         image: item.image,

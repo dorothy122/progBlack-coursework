@@ -26,7 +26,11 @@ button {
     width: 25rem;
     padding-left: 10px;
     padding-bottom: 5px;
-    background-color: darkgrey;
+}
+
+.popover {
+    max-width: none;
+    width: auto;
 }
 
 
