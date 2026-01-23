@@ -268,7 +268,7 @@ function overlay(card, image) {
   // get overlay dimensions
   let overlayRect = overlay.getBoundingClientRect()
 
-  let top = imgRect.top
+  let top = imgRect.top + window.scrollY
   let left = imgRect.left
 
   let viewportWidth = window.innerWidth
