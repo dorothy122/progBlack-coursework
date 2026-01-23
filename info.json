@@ -3,7 +3,7 @@
        "name": "Little Women 2019",
        "type": "Movie",
        "genre": "Hisotrical, Coming-of-age, Book Adaptation",
-       "streaming": "Netflix, AmazonForRent",
+       "streaming": "Netflix, Amazon To Rent",
        "ageRating": "12",
        "description": "Determined to make her own way in the 1860s, a writer looks back at the tough yet tender times spent with her three spriited sisters and a close friend",
 
@@ -27,7 +27,7 @@
         "name": "Pitch Perfect",
         "type": "Movie",
         "genre": "Comedy, Musical",
-        "streaming": "Netflix, AmazonForRent",
+        "streaming": "Netflix, Amazon To Rent",
         "ageRating": "12",
         "description": "It's a musical showdown when Beca joins an accapella group and revamps their stodgy style to take on a university competition",
 
@@ -35,14 +35,14 @@
         "image": "https://www.themoviedb.org/t/p/original/H78uA7tDGvDDSwWICx0aKpCpFi.jpg"
     },
     {
-       "name": "the Salt Path",
+       "name": "The Salt Path",
        "type": "Movie",
        "genre": "Biographical, Drama, Book Adaptation",
        "streaming": "Amazon Prime",
        "ageRating": "12",
        "description": "Based on Raynor Winn's bestseller, The Salt Path tells the emotional and life-affirming story of a couple whose connection with the natural world helps them overcome challenges and ultimately reconnect with one another",
 
-       "imageTitle": "the Salt Path",
+       "imageTitle": "The Salt Path",
        "image": "https://image.tmdb.org/t/p/original/hxFVQwuY3frktKxG5ySY35o5MkO.jpg"
 
     },
@@ -58,21 +58,21 @@
         "image": "https://image.tmdb.org/t/p/original/hMWzeRgamVykBnV3BU2Spu9D27U.jpg"
     },
     {
-        "name":"Fianl Destination 1",
+        "name":"Final Destination 1",
         "type": "Movie",
         "genre": "Horror",
         "streaming": "Amazon Prime",
         "ageRating": "15",
         "description": "When a teenager has a premonition that the plane he's about to board is going to explode, he throws a fit and gets him and his friends kicked off it. Shockingly, the plane crashes. As the group begins to die mysteriously one by one, the remaining survivors must try to figure out what is going on before they join the other victims.",
 
-        "imageTitle": "Final Destination",
+        "imageTitle": "Final Destination 1",
         "image": "https://upload.wikimedia.org/wikipedia/en/9/99/Final_destination_09.jpg"
     },
     {
         "name": "The Avengers",
         "type": "Movie",
         "genre": "Super Hero, Action",
-        "streaming": "Disney+, AmazonForRent",
+        "streaming": "Disney+, Amazon To Rent",
         "ageRating": "12",
         "description": "Marvel makes cinematic history as the Super Hero team of a lifetime assemble for the first time ever in this action-packed blockbuster! Packed with spectacular visual effects, Marvel's The Avengers will blow your mind!",
 
@@ -127,7 +127,7 @@
     {
         "name": "Bridgerton",
         "type": "TV",
-        "genre": "Hsitorical, Romance, Book Adaptation",
+        "genre": "Historical, Romance, Book Adaptation",
         "streaming": "Netflix",
         "ageRating": "15",
         "description": "The eight close-knit siblings of the nobles and powerful Bridgerton family navigate London high socirty in search of love, surrounded by friends and rivals alike.",
@@ -187,18 +187,18 @@
         "ageRating": "15",
         "description": "Meet Fleabag. She's not talking to all of us - she's talking to you. So why don't you pop your top off and come right in?",
 
-        "imageTitle": "Feabag",
+        "imageTitle": "Fleabag",
         "image": "https://resizing.flixster.com/IXWkCwJyyH0hL8Yqv0GqH2kKMRo=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p13139614_b_v10_ac.jpg"
     },
     {
         "name": "Daisy Jones and the Six",
         "type": "TV",
-        "genre": "Hsitorical, Romance, Book Adaptation",
+        "genre": "Historical, Romance, Book Adaptation",
         "streaming": "Amazon Prime",
         "ageRating": "15",
         "description": "In 1977, Daisy Jones & The Six were on top of the world. Fronted by two heat seeking missiles, the band had risen from obscurity to fame. And then, after a sold-out show at Chicago's Soldier Field, they called it quits. Now, decades later, the band members finally agree to reveal the truth. This is the story of how an iconic band imploded at the height of its powers.",
 
-        "imageTitle": "Dasy Jones and the Six",
+        "imageTitle": "Diasy Jones and the Six",
         "image": "https://m.media-amazon.com/images/M/MV5BOTMwNzIzZDItYzYzYS00ZDA4LThiNmYtYTJjYjMwZTUxNTk1XkEyXkFqcGc@._V1_.jpg"
     },
     {
@@ -246,14 +246,14 @@
         "image": "https://media-cache.cinematerial.com/p/500x/gd18mdvl/bluey-video-on-demand-movie-cover.jpg?v=1704195187"
     },
     {
-        "name": "Traitors",
+        "name": "The Traitors UK",
         "type": "TV",
         "genre": "Game show",
         "streaming": "IPlayer",
         "ageRating": "15",
         "description": "Get them before they get you. 22 people, one castle, £120k - Claudia Winkleman hosts the ultimate reality game of trust and treachery. Let the mind games begin.",
 
-        "imageTitle": "the Traitors",
+        "imageTitle": "The Traitors UK",
         "image": "https://m.media-amazon.com/images/M/MV5BODFlZTE3YzgtZDBkZC00NDA2LWI2OGQtZWQ5MGY4MmFjZTYxXkEyXkFqcGc@._V1_.jpg"
     }
 ]

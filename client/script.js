@@ -10,8 +10,21 @@
 // 6. DONE send additional info on click of image 
 // 7. DONE make overlay scroll with page
 // 8. make server start with npm start
-// 9. reset all filters when click home
+// 9. DONE reset all filters when click home
 // 10. DONE remove overlay when click on filters
+
+// 11. fix json typos and inconsitencies
+// 12. change POST to GET single item
+// 13. add POST to add new item 
+// 13.1 add form at bottom page to insert data to add
+// 13.2 send form data to server POST
+// 13.3 server add recieved data to JSON file + refetch this file
+// 14. API documentation
+// 15. display server errors to user
+// 16. watch the testing lectures
+// 17. do the testing stuff
+// 18. make video 
+
 
 
 
@@ -60,7 +73,19 @@ window.addEventListener('DOMContentLoaded', function(event){
 
   // filter home
   const homeButton = this.document.getElementById("home");
-  homeButton.addEventListener("click", () => {movies = true, series = true, applyFilters(allData)})
+  homeButton.addEventListener("click", () => {
+    // reset all filters and switches
+    movies = true, series = true, 
+    filters.netflix = true, filters.all4 = true, filters.amazonRent = true, filters.disney = true, filters.iplayer = true, filters.itvx = true, filters.prime = true,
+    this.document.getElementById("netflixSwitch").checked = true
+    this.document.getElementById("all4Switch").checked = true
+    this.document.getElementById("amazonRentSwitch").checked = true
+    this.document.getElementById("disneySwitch").checked = true
+    this.document.getElementById("iplayerSwitch").checked = true
+    this.document.getElementById("itvxSwitch").checked = true
+    this.document.getElementById("primeSwitch").checked = true
+
+    applyFilters(allData)})
 
 
   // apply streaming platform filters
@@ -133,6 +158,9 @@ window.addEventListener('DOMContentLoaded', function(event){
 
 
 })
+
+
+
 
 
 // on click of image, enlarge image and display additional info
@@ -284,16 +312,6 @@ function overlay(card, image) {
   }
 
 
-  //if (left < 8) {
-  //  left = 8
-  //}
-
-  //if (top + overlayRect.height > viewportHeight) {
-    //top = viewportHeight - overlayRect.height
-  //}
-  //if (top < 8) {
-    //top =  8
-  //}
 
   overlay.style.top = `${top}px`
   overlay.style.left = `${left}px`
@@ -344,11 +362,8 @@ function applyFilters(data) {
       available = true
     }
 
-    if (filters.disney == true && data[i].streaming.includes("Disney+")) {
-      available = true
-    }
 
-    if (filters.amazonRent == true && data[i].streaming.includes("AmazonForRent")) {
+    if (filters.amazonRent == true && data[i].streaming.includes("Amazon To Rent")) {
       available = true
     }
 
