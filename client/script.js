@@ -9,6 +9,7 @@
 // 5. DONE on click of image, enlarge to show extra info
 // 6. DONE send additional info on click of image 
 // 7. make overlay scroll with page
+// 8. make server start with npm start
 
 
 

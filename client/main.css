@@ -10,6 +10,7 @@
     background-color:#537B2F;
 }
 
+
 img {
     width: 145px;
     height: 225px;
@@ -26,13 +27,14 @@ button {
     width: 400px;
     padding-left: 10px;
     padding-bottom: 5px;
+    background-color: darkgrey;
 }
 
 
 
 .overlay {
     /* mainly from w3schools overlay page: https://www.w3schools.com/howto/howto_css_overlay.asp*/
-    position: fixed;
+    position: absolute;
     display: flex; 
     width: fit-content;
     height: fit-content;
