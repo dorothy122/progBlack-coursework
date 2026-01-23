@@ -8,8 +8,10 @@
 // 4.5 DONE filter streaming platforms
 // 5. DONE on click of image, enlarge to show extra info
 // 6. DONE send additional info on click of image 
-// 7. make overlay scroll with page
+// 7. DONE make overlay scroll with page
 // 8. make server start with npm start
+// 9. reset all filters when click home
+// 10. DONE remove overlay when click on filters
 
 
 
@@ -242,14 +244,15 @@ function overlay(card, image) {
   overlay.className = "overlay"
 
   // remove overlay when click off it
-  content.addEventListener("click", () => {
-    overlay.remove()
+  document.addEventListener("click", (event) => {
+      overlay.remove()
   })
 
   // if click on overlay, dont remove it
   card.addEventListener("click", (event) => {
     event.stopPropagation()
   })
+
 
   // add card to overlay
   overlay.append(card)
