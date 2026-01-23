@@ -27,18 +27,22 @@ app.get('/list', function(req, resp) {
 
     // map function: https://www.w3tutorials.net/blog/nodejs-filter-map/#the-map-method
 
-    resp.send(summary);
+    resp.status(200).json(summary);
 
 });
 
 
 // send specific info 
-app.post('/list/single', function(req, resp) {
-    const {title} = req.body
+app.get('/list/:title', function(req, resp) {
+    const title = req.params.title
 
     // idk how to do this bit. find somewhere that ectually explains this line 
     const item = info.find(obj => obj.imageTitle === title)
-    resp.send(item)
+
+    // ADD DISPLAY ERROR IF ERROR BIT
+
+    
+    resp.status(200).json(item)
 })
 
 

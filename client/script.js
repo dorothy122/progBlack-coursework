@@ -13,8 +13,8 @@
 // 9. DONE reset all filters when click home
 // 10. DONE remove overlay when click on filters
 
-// 11. fix json typos and inconsitencies
-// 12. change POST to GET single item
+// 11. DONE fix json typos and inconsitencies
+// 12. DONE change POST to GET single item
 // 13. add POST to add new item 
 // 13.1 add form at bottom page to insert data to add
 // 13.2 send form data to server POST
@@ -129,11 +129,10 @@ window.addEventListener('DOMContentLoaded', function(event){
       
       // request info
       // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
-      fetch('/list/single', {
-        method:"POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ title })
-      })
+      fetch(`/list/${encodeURIComponent(title)}`)
+        //method:"GET",
+        //headers: {"Content-Type": "application/json"},
+        //body: JSON.stringify({ title })
 
       // if not recieved
       .then(response => {
@@ -149,6 +148,9 @@ window.addEventListener('DOMContentLoaded', function(event){
         let newCard = card(data)
         // add to overlay
         overlay(newCard, image)
+
+
+      // ADD CATCH BIT TO DISPLAY ERROR
 
       })
     }
