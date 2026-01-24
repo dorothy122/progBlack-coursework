@@ -104,18 +104,65 @@
 
 
 
-    <!-- card example 
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-        </div>
-    </div>
--->
-
     
+    <!-- form to add new items using bootstrap navbar-->
+
+    <nav class="navbar bottom">
+        <div class = "container-fluid">
+        <a class="navbar-brand" href="#">Add Movie/Series</a>
+        <form>
+            <div class="row mb-3">
+                <div class="col-5">
+                    <input type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="col-3">
+                    <input type="text" class="form-control" placeholder="Genre">
+                </div>
+                <div class="col-2">
+                    <select class="custom-select">
+                        <option selected>Movie/Series</option>
+                        <option value="1">Movie</option>
+                        <option value="2">Series</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <select class="custom-select">
+                        <option selected>Age Rating</option>
+                        <option value="1">U</option>
+                        <option value="2">PG</option>
+                        <option value="2">12</option>
+                        <option value="2">15</option>
+                        <option value="2">18</option>
+                    </select>
+                </div>
+            </div>
+            <div class = "row mb-3">
+                <div class = "col">
+                    <input type="text" class="form-control" placeholder="Image Link">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Platforms">
+                </div>
+            </div>
+            <div class = "row mb-3">
+                <div class = "col-10">
+                    <input type="text" class="form-control" placeholder="Description">
+                </div>
+                <div class = "col-2">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+            </div>
+
+
+
+        </form>
+        </div>
+    </nav>
+
+
+
+
+
     <!-- link the client side java script -->
     <script src="script.js"></script>
 

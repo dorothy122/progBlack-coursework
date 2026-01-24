@@ -4,10 +4,12 @@
     padding-left:25px;
     padding-right:25px;
     padding-top:25px;
+    padding-bottom: 25px;
 }
 
 .navbar {
     background-color:#537B2F;
+
 }
 
 
@@ -43,7 +45,7 @@ button {
     right: 0;
     bottom: 0;
     background-color: rgba(76, 73, 72, 0.5);
-    z-index: 2;
+    z-index: 1;
     cursor: pointer;
 }
 
