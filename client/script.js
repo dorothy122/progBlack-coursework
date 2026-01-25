@@ -15,10 +15,11 @@
 
 // 11. DONE fix json typos and inconsitencies
 // 12. DONE change POST to GET single item
-// 13. add POST to add new item 
-// 13.1 add form at bottom page to insert data to add
-// 13.2 send form data to server POST
-// 13.3 server add recieved data to JSON file + refetch this file
+// 13. DONE add POST to add new item 
+// 13.1 DONE add form at bottom page to insert data to add NEEDS CSS
+// 13.2 DONE send form data to server POST
+// 13.3 DONE server add recieved data to JSON file + refetch this file
+// 13.4 display errors if not all entered
 // 14. API documentation
 // 15. display server errors to user
 // 16. watch the testing lectures
@@ -128,7 +129,6 @@ window.addEventListener('DOMContentLoaded', function(event){
       const title = image.alt
       
       // request info
-      // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
       fetch(`/list/${encodeURIComponent(title)}`)
         //method:"GET",
         //headers: {"Content-Type": "application/json"},
@@ -156,7 +156,41 @@ window.addEventListener('DOMContentLoaded', function(event){
     }
   })
 
+  // form sumbit
+  const form = document.getElementById("form")
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault() // stop page reloading
 
+
+    // store inputs: https://www.geeksforgeeks.org/javascript/how-to-get-the-value-of-text-input-field-using-javascript/
+    const newItem = {
+      name: document.getElementById("titleInput").value,
+      type: document.getElementById("typeInput").value,
+      genre: document.getElementById("genreInput").value,
+      streaming: document.getElementById("platformInput").value,
+      ageRating: document.getElementById("ageRatingInput").value,
+      description: document.getElementById("descriptionInput").value,
+      image: document.getElementById("imageInput").value,
+      imageTitle: document.getElementById("titleInput").value,
+    }
+
+    // post method: // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
+    const response = await fetch('/list/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newItem)
+    })
+    
+    if (response.ok) {
+      const responseBody = await response.text()
+      alert("Item Added")
+      location.reload()
+    }
+    else {
+      alert("Problem with POST request " + response.statusText)
+    }
+
+  })
 
 
 })

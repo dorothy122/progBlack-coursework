@@ -106,55 +106,52 @@
 
     
     <!-- form to add new items using bootstrap navbar-->
-
+    <!-- bootstrap docs: https://getbootstrap.com/docs/4.0/components/forms/ -->
     <nav class="navbar bottom">
         <div class = "container-fluid">
         <a class="navbar-brand" href="#">Add Movie/Series</a>
-        <form>
+        <form id="form">
             <div class="row mb-3">
                 <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Title">
+                    <input type="text" class="form-control" placeholder="Title" id="titleInput">
                 </div>
                 <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Genre">
+                    <input type="text" class="form-control" placeholder="Genre" id="genreInput">
                 </div>
                 <div class="col-2">
-                    <select class="custom-select">
-                        <option selected>Movie/Series</option>
-                        <option value="1">Movie</option>
-                        <option value="2">Series</option>
+                    <select class="custom-select" id="typeInput">
+                        <option selected>Type</option>
+                        <option value="Movie">Movie</option>
+                        <option value="TV">Series</option>
                     </select>
                 </div>
                 <div class="col-2">
-                    <select class="custom-select">
-                        <option selected>Age Rating</option>
-                        <option value="1">U</option>
-                        <option value="2">PG</option>
-                        <option value="2">12</option>
-                        <option value="2">15</option>
-                        <option value="2">18</option>
+                    <select class="custom-select" id="ageRatingInput">
+                        <option selected>Age</option>
+                        <option value="U">U</option>
+                        <option value="PG">PG</option>
+                        <option value="12">12</option>
+                        <option value="15">15</option>
+                        <option value="18">18</option>
                     </select>
                 </div>
             </div>
             <div class = "row mb-3">
                 <div class = "col">
-                    <input type="text" class="form-control" placeholder="Image Link">
+                    <input type="text" class="form-control" placeholder="Image Link" id="imageInput">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Platforms">
+                    <input type="text" class="form-control" placeholder="Platforms" id="platformInput">
                 </div>
             </div>
             <div class = "row mb-3">
                 <div class = "col-10">
-                    <input type="text" class="form-control" placeholder="Description">
+                    <input type="text" class="form-control" placeholder="Description" id="descriptionInput">
                 </div>
                 <div class = "col-2">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" type="submit">Add</button>
                 </div>
             </div>
-
-
-
         </form>
         </div>
     </nav>

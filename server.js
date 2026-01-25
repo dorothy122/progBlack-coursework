@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const fs = require('fs');
+
 // using the client folder
 app.use(express.static('client'));
 // allows server to recieve json from client 
@@ -41,8 +43,15 @@ app.get('/list/:title', function(req, resp) {
 
     // ADD DISPLAY ERROR IF ERROR BIT
 
-    
+
     resp.status(200).json(item)
+})
+
+
+app.post("/list/add", function(req, resp) {
+    info.push(req.body)
+    fs.writeFileSync("./info.json", JSON.stringify(info, null, 2))
+    resp.send("Thank you, your item has been added to the page")
 })
 
 

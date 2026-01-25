@@ -44,9 +44,15 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(76, 73, 72, 0.5);
     z-index: 1;
     cursor: pointer;
+}
+
+.custom-select {
+    height: 37px;
+    border-radius: 8px;
+    color: #6c757d;
+
 }
 
 
