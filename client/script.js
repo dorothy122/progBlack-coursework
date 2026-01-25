@@ -19,7 +19,7 @@
 // 13.1 DONE add form at bottom page to insert data to add NEEDS CSS
 // 13.2 DONE send form data to server POST
 // 13.3 DONE server add recieved data to JSON file + refetch this file
-// 13.4 display errors if not all entered
+// 13.4 DONE display errors if not all entered
 // 14. API documentation
 // 15. display server errors to user
 // 16. watch the testing lectures
@@ -174,27 +174,49 @@ window.addEventListener('DOMContentLoaded', function(event){
       imageTitle: document.getElementById("titleInput").value,
     }
 
-    // post method: // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
-    const response = await fetch('/list/add', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newItem)
-    })
-    
-    if (response.ok) {
-      const responseBody = await response.text()
-      alert("Item Added")
-      location.reload()
-    }
-    else {
-      alert("Problem with POST request " + response.statusText)
+    // validate form
+    let valid = false
+    if (newItem.name != "") {
+      if (newItem.type != "type") {
+        if (newItem.genre != "") {
+          if (newItem.streaming != "") {
+            if (newItem.ageRating != "age") {
+              if (newItem.description != "") {
+                if (newItem.image != "") {
+                  valid = true
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
+    
+    if (valid == true) {
+      // post method: // https://www.geeksforgeeks.org/javascript/javascript-fetch-method/
+      const response = await fetch('/list/add', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newItem)
+      })
+      
+      if (response.ok) {
+        const responseBody = await response.text()
+        alert("Item Added")
+        location.reload()
+      }
+      else {
+        alert("Problem with POST request " + response.statusText)
+      }
+    }
+    else {
+      alert("Fill out all items")
+    }
   })
 
 
 })
-
 
 
 
