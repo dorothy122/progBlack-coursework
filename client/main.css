@@ -9,7 +9,6 @@
 
 .navbar {
     background-color:#537B2F;
-
 }
 
 
@@ -22,6 +21,7 @@ img {
  
 button {
     margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -52,8 +52,9 @@ button {
     height: 37px;
     border-radius: 8px;
     color: #6c757d;
-
 }
+
+
 
 .invalid-feedback {
     color: whitesmoke;

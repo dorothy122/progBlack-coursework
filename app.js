@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 
@@ -17,8 +18,8 @@ const info = require('./info.json');
 
 // send info to script.js
 app.get('/list', function(req, resp) {
-    // filter info
-
+    
+    // filter info to send
     const summary = info.map( item => ({
         name: item.name,
         type: item.type,
@@ -27,8 +28,7 @@ app.get('/list', function(req, resp) {
         imageTitle: item.imageTitle
 
     }));
-
-    // map function: https://www.w3tutorials.net/blog/nodejs-filter-map/#the-map-method
+    // map function use: https://www.w3tutorials.net/blog/nodejs-filter-map/#the-map-method
 
     resp.status(200).json(summary);
 
@@ -60,11 +60,11 @@ app.post("/list/add", function(req, resp) {
         resp.send("Thank you, your item has been added to the page")
     }
     else {
+        // msg to tell user its a duplicate
         resp.status(400).send("Item with this title already exists")
 
     }
 })
 
-
-
+// connect to server.js
 module.exports = app;

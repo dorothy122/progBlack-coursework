@@ -21,12 +21,12 @@
 // 13.3 DONE server add recieved data to JSON file + refetch this file
 // 13.4 DONE display errors if not all entered
 // 13.5 DONE display error next to field to fill
-// 14. API documentation
+// 14. DONE API documentation
 // 15. DONE display server errors to user
 // 16. watch the testing lectures
 // 17. do the testing stuff
 // 18. make video 
-// 19. prevent being able to add duplicate
+// 19. DONE prevent being able to add duplicate
 
 
 
@@ -43,8 +43,6 @@ let series = true
 let filters = {
   netflix:true, prime:true, disney:true, iplayer:true, all4:true, itvx:true, amazonRent:true
 }
-
-
 
 
 // load all images when page loads 
@@ -85,8 +83,8 @@ window.addEventListener('DOMContentLoaded', function(event){
   // filter home
   const homeButton = this.document.getElementById("home");
 
+  // reset all filters and switches when home button clicked
   homeButton.addEventListener("click", () => {
-    // reset all filters and switches
     movies = true, series = true, 
     filters.netflix = true, filters.all4 = true, filters.amazonRent = true, filters.disney = true, filters.iplayer = true, filters.itvx = true, filters.prime = true,
     this.document.getElementById("netflixSwitch").checked = true
@@ -99,7 +97,6 @@ window.addEventListener('DOMContentLoaded', function(event){
 
     applyFilters(allData)
   })
-
 
 
   // apply streaming platform filters
@@ -138,10 +135,10 @@ window.addEventListener('DOMContentLoaded', function(event){
       // store the image clicked
       let image = event.target
 
-      // get image names
+      // get image name
       const title = image.alt
       
-      // request info
+      // request additional info
       fetch(`/list/${encodeURIComponent(title)}`)
       // if not recieved
       .then(response => {
@@ -153,6 +150,7 @@ window.addEventListener('DOMContentLoaded', function(event){
 
       // if recieved, enlarge item
       .then(data => {
+        // ensure no error displayed
         serverHideError()
         // create card
         let newCard = card(data)
@@ -289,6 +287,7 @@ function clearError(input) {
   input.classList.remove("is-invalid")
 }
 
+
 // server disconnect errors
 function serverErrorShow(message) {
   const errorBox = document.getElementById("error")
@@ -405,7 +404,7 @@ function card(data, image) {
 }
 
 
-// add generated card to an overlay
+// add generated card to the overlay
 function overlay(card, image) {
   let content = document.getElementById("content")
 
@@ -437,24 +436,34 @@ function overlay(card, image) {
   // determine overlay pos
   // use of getBoundingClientRect from : https://sqlpey.com/javascript/retrieve-x-y-position-html-elements-javascript/
   let imgRect = image.getBoundingClientRect()
-
+  
   // get overlay dimensions
   let overlayRect = overlay.getBoundingClientRect()
+  
+  // get nav bar dimensions
+  let navbar = document.getElementById("navbar bottom")
+  let navbarRect = navbar.getBoundingClientRect()
 
+  // determine image positions
   let top = imgRect.top + window.scrollY
+  let imgBottom = imgRect.bottom + window.scrollY
   let left = imgRect.left
 
+  // determine the width of the screen
   let viewportWidth = window.innerWidth
-  //let viewportHeight = window.innerHeight
 
-  // check doesnt go off screen
+
+  // check doesnt go off screen (horizontally)
   if (left + overlayRect.width > viewportWidth) {
     left = left - 255
-    //overlay.style.right = `${right}px`
   }
 
+  // check doesnt go off screen (vertically)
+  if (top+ overlayRect.height > navbarRect.top + window.scrollY){
+    top = imgBottom - overlayRect.height
+  }
 
-
+  // set position
   overlay.style.top = `${top}px`
   overlay.style.left = `${left}px`
 
