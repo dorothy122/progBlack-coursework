@@ -38,11 +38,7 @@ app.get('/list', function(req, resp) {
 app.get('/list/:title', function(req, resp) {
     const title = req.params.title
 
-    // idk how to do this bit. find somewhere that ectually explains this line 
     const item = info.find(obj => obj.imageTitle === title)
-
-    // ADD DISPLAY ERROR IF ERROR BIT
-
 
     resp.status(200).json(item)
 })

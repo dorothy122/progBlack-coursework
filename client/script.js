@@ -26,6 +26,8 @@
 // 16. watch the testing lectures
 // 17. do the testing stuff
 // 18. make video 
+// 19. prevent being able to add duplicate
+
 
 
 
