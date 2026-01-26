@@ -57,6 +57,8 @@ window.addEventListener('DOMContentLoaded', function(event){
 
 
     .then(data => {
+      // no server error
+      serverHideError()
       // gloablly store data
       allData = data
 
@@ -66,7 +68,7 @@ window.addEventListener('DOMContentLoaded', function(event){
 
     // display error if unable to fetch
     .catch(error => {
-      this.alert("Unable to load data. Is server running?")
+      serverErrorShow("Server unavailable. Please try again later")
     })
 
 
@@ -139,10 +141,6 @@ window.addEventListener('DOMContentLoaded', function(event){
       
       // request info
       fetch(`/list/${encodeURIComponent(title)}`)
-        //method:"GET",
-        //headers: {"Content-Type": "application/json"},
-        //body: JSON.stringify({ title })
-
       // if not recieved
       .then(response => {
         if (!response.ok) {
@@ -153,18 +151,19 @@ window.addEventListener('DOMContentLoaded', function(event){
 
       // if recieved, enlarge item
       .then(data => {
+        serverHideError()
         // create card
         let newCard = card(data)
         // add to overlay
         overlay(newCard, image)
 
+      })
 
       // display error if unable to fetch
       .catch(error => {
-        this.alert("Unable to load data. Is server running?")
+        serverErrorShow("Server unavailable. Please try again later")
       })
 
-      })
     }
   })
 
@@ -255,15 +254,23 @@ window.addEventListener('DOMContentLoaded', function(event){
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newItem)
       })
+
+      .then(resp => {
+        if (!resp.ok) {
+          throw new Error("Failed to add")
+        }
+        return resp.text()
+      })
       
-      if (response.ok) {
-        const responseBody = await response.text()
-        alert("Item Added")
-        location.reload()
-      }
-      else {
-        alert("Problem with POST request " + response.statusText)
-      }
+      .then(msg => {
+        serverHideError()
+        alert(msg)
+      })
+
+      .catch(error => {
+        serverErrorShow("cannot add item - server not running")
+      })
+
     }
   })
 
@@ -278,6 +285,18 @@ function showError(input) {
 // remove error if filled
 function clearError(input) {
   input.classList.remove("is-invalid")
+}
+
+// server disconnect errors
+function serverErrorShow(message) {
+  const errorBox = document.getElementById("error")
+  errorBox.textContent = message
+  errorBox.classList.remove("d-none")
+}
+
+function serverHideError() {
+  const errorBox = document.getElementById("error")
+  errorBox.classList.add("d-none")
 }
 
 
