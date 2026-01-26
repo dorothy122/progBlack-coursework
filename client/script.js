@@ -20,8 +20,9 @@
 // 13.2 DONE send form data to server POST
 // 13.3 DONE server add recieved data to JSON file + refetch this file
 // 13.4 DONE display errors if not all entered
+// 13.5 display error next to field to fill
 // 14. API documentation
-// 15. display server errors to user
+// 15. DONE display server errors to user
 // 16. watch the testing lectures
 // 17. do the testing stuff
 // 18. make video 
@@ -61,8 +62,13 @@ window.addEventListener('DOMContentLoaded', function(event){
 
       // run function to organise and display the data
       displayImage(allData)
-
     })
+
+    // display error if unable to fetch
+    .catch(error => {
+      this.alert("Unable to load data. Is server running?")
+    })
+
 
   // filter movies
   const moviesButton = document.getElementById("movies");
@@ -74,6 +80,7 @@ window.addEventListener('DOMContentLoaded', function(event){
 
   // filter home
   const homeButton = this.document.getElementById("home");
+
   homeButton.addEventListener("click", () => {
     // reset all filters and switches
     movies = true, series = true, 
@@ -86,7 +93,9 @@ window.addEventListener('DOMContentLoaded', function(event){
     this.document.getElementById("itvxSwitch").checked = true
     this.document.getElementById("primeSwitch").checked = true
 
-    applyFilters(allData)})
+    applyFilters(allData)
+  })
+
 
 
   // apply streaming platform filters
@@ -150,7 +159,10 @@ window.addEventListener('DOMContentLoaded', function(event){
         overlay(newCard, image)
 
 
-      // ADD CATCH BIT TO DISPLAY ERROR
+      // display error if unable to fetch
+      .catch(error => {
+        this.alert("Unable to load data. Is server running?")
+      })
 
       })
     }
@@ -217,7 +229,6 @@ window.addEventListener('DOMContentLoaded', function(event){
 
 
 })
-
 
 
 
