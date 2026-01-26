@@ -46,9 +46,23 @@ app.get('/list/:title', function(req, resp) {
 
 
 app.post("/list/add", function(req, resp) {
-    info.push(req.body)
-    fs.writeFileSync("./info.json", JSON.stringify(info, null, 2))
-    resp.send("Thank you, your item has been added to the page")
+    // check not a duplicate
+    const duplicate = info.find(item => item.name == req.body.name)
+
+    if (!duplicate) {
+        // add to info
+        info.push(req.body)
+
+        // add to json file
+        fs.writeFileSync("./info.json", JSON.stringify(info, null, 2))
+
+        // send message back to say its been added
+        resp.send("Thank you, your item has been added to the page")
+    }
+    else {
+        resp.status(400).send("Item with this title already exists")
+
+    }
 })
 
 

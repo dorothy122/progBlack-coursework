@@ -92,5 +92,8 @@ endpoint url: http://localhost:8090/list/add
 **success response** - "Thank you, your item has been added to the page". status: 200 okay
 
 
-**errors** - 500 server error -> server down or does not exist. 400 bad request -> form has invalid or missing fields 
+**errors** 
+- 500 server error -> server down or does not exist. 
+- 400 bad request -> form has invalid or missing fields 
+- 400 duplicate item added -> "Item with this title already exists"
 
