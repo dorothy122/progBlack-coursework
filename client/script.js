@@ -20,7 +20,7 @@
 // 13.2 DONE send form data to server POST
 // 13.3 DONE server add recieved data to JSON file + refetch this file
 // 13.4 DONE display errors if not all entered
-// 13.5 display error next to field to fill
+// 13.5 DONE display error next to field to fill
 // 14. API documentation
 // 15. DONE display server errors to user
 // 16. watch the testing lectures
@@ -187,21 +187,64 @@ window.addEventListener('DOMContentLoaded', function(event){
     }
 
     // validate form
-    let valid = false
-    if (newItem.name != "") {
-      if (newItem.type != "type") {
-        if (newItem.genre != "") {
-          if (newItem.streaming != "") {
-            if (newItem.ageRating != "age") {
-              if (newItem.description != "") {
-                if (newItem.image != "") {
-                  valid = true
-                }
-              }
-            }
-          }
-        }
-      }
+    let valid = true
+
+    // check each field filled, if not, display error
+    if (newItem.name == "") {
+      showError(titleInput)
+      valid = false
+    }
+    else {
+      clearError(titleInput)
+    }
+
+    if (newItem.type == "") {
+      showError(typeInput)
+      valid = false
+    }
+    else {
+      clearError(typeInput)
+    }
+
+    if (newItem.genre == "") {
+      showError(genreInput)
+      valid = false
+    }
+    else {
+      clearError(genreInput)
+    }
+
+    if (newItem.streaming == "") {
+      showError(platformInput)
+      valid = false
+    }
+    else {
+      clearError(platformInput)
+    }
+
+
+    if (newItem.ageRating == "") {
+      showError(ageRatingInput)
+      valid = false
+    }
+    else {
+      clearError(ageRatingInput)
+    }
+
+    if (newItem.description == "") {
+      showError(descriptionInput)
+      valid = false
+    }
+    else {
+      clearError(descriptionInput)
+    }
+                
+    if (newItem.image == "") {
+      showError(imageInput)
+      valid = false
+    }
+    else {
+      clearError(imageInput)
     }
 
     
@@ -222,13 +265,22 @@ window.addEventListener('DOMContentLoaded', function(event){
         alert("Problem with POST request " + response.statusText)
       }
     }
-    else {
-      alert("Fill out all items")
-    }
   })
 
-
 })
+
+
+// display error if not filled
+function showError(input) {
+  input.classList.add("is-invalid")
+}
+
+// remove error if filled
+function clearError(input) {
+  input.classList.remove("is-invalid")
+}
+
+
 
 
 
