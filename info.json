@@ -1,5 +1,5 @@
 [
-  {
+   {
     "name": "Little Women",
     "type": "Movie",
     "genre": "Hisotrical, Coming-of-age, Book Adaptation",
@@ -9,6 +9,7 @@
     "imageTitle": "Little Women",
     "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
   },
+
   {
     "name": "People We Meet On Vacation",
     "type": "Movie",

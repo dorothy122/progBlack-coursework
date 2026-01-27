@@ -41,7 +41,12 @@ app.get('/list/:title', function(req, resp) {
 
     const item = info.find(obj => obj.imageTitle === title)
 
-    resp.status(200).json(item)
+    if (item != undefined) {
+        resp.status(200).json(item)
+    }
+    else {
+        resp.status(400).json({error: "No content for this item"})
+    }
 })
 
 

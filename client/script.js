@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', function(event){
       // if not recieved
       .then(response => {
         if (!response.ok) {
-          throw new Error("Server returned status " + response.status);
+          throw new Error(err.error || "Request failed");
         }
         return response.json();
       })
@@ -156,12 +156,11 @@ window.addEventListener('DOMContentLoaded', function(event){
         let newCard = card(data)
         // add to overlay
         overlay(newCard, image)
-
       })
 
       // display error if unable to fetch
       .catch(error => {
-        serverErrorShow("Server unavailable. Please try again later")
+        serverErrorShow(error.message || "Server unavailable. Please try again later")
       })
 
     }
