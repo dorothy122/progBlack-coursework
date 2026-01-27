@@ -180,7 +180,7 @@ describe("Test the service", () => {
     // correct content/fields sent
     test("Get /genres includes id, name", () => {
         return request(app)
-        .get("/list")
+        .get("/genres")
         .expect(/name/)
         .expect(/id/)
     })

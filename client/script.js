@@ -11,7 +11,7 @@
 // 5. DONE on click of image, enlarge to show extra info
 // 6. DONE send additional info on click of image 
 // 7. DONE make overlay scroll with page
-// 8. make server start with npm start
+// 8. DONE make server start with npm start
 // 9. DONE reset all filters when click home
 // 10. DONE remove overlay when click on filters
 

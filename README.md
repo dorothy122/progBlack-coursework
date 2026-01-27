@@ -7,7 +7,7 @@
 # GET /list
 **Endpoint url:** http://localhost:8090/list
 
-**Description** - Fetches the name, type, image, imageTitle, and streaming for all items in info.json 
+**Description** - Fetches the name, type, image, imageTitle, and streaming for all items in items.json 
 
 **Method** - GET
 
@@ -16,6 +16,7 @@
 **Success Response** - Sends data from items.json as json content
 
 **Example Response** - Example of part of the response, sends this data for all items in the file so that the images can all be displayed on the page and filtered.
+```json
 [
   {
     "name": "Little Women",
@@ -40,6 +41,7 @@
   },
   ...
 ]
+```
 
 **Errors** - 500 server error -> server down or does not exist. Displays "Server unavailable. Please try again later" to user.
 
@@ -56,6 +58,7 @@
 **Success Response** - Sends complete data for item corresponding to title as a JSON object.
 
 **Example Response** - 
+```
 {
   "name": "Little Women",
   "type": "Movie",
@@ -66,6 +69,7 @@
   "imageTitle": "Little Women",
   "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
 }
+```
 
 **errors** - 500 server error -> server down or does not exist. Displays "Server unavailable. Please try again later" to user.
 
@@ -111,6 +115,7 @@ endpoint url: http://localhost:8090/list/add
 **Success Response** - Sends data from genres.json as json content. Sends status 200,
 
 **Example Response** - Part of the file:
+```
 [
     {
         "id": "drama", "name": "Drama"
@@ -119,6 +124,7 @@ endpoint url: http://localhost:8090/list/add
         "id": "comedy", "name": "Comedy"
     }
 ]
+```
 
 
 **Errors** - 500 server error -> server down or does not exist. Displays "Server unavailable. Please try again later" to user.

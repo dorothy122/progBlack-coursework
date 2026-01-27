@@ -306,18 +306,6 @@
     "image": "https://m.media-amazon.com/images/M/MV5BODFlZTE3YzgtZDBkZC00NDA2LWI2OGQtZWQ5MGY4MmFjZTYxXkEyXkFqcGc@._V1_.jpg"
   },
   {
-    "name": "helo",
-    "type": "Movie",
-    "streaming": "Netflix, All4",
-    "ageRating": "15",
-    "description": "hello",
-    "image": "https://pics.filmaffinity.com/derry_girls-448454269-large.jpg",
-    "imageTitle": "helo",
-    "genre": [
-      "drama"
-    ]
-  },
-  {
     "name": "Derry Girls",
     "type": "Series",
     "genre": "Comedy",
