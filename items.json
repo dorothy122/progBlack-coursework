@@ -316,5 +316,25 @@
     "genre": [
       "drama"
     ]
+  },
+  {
+    "name": "Derry Girls",
+    "type": "Series",
+    "genre": "Comedy",
+    "streaming": "Netflix",
+    "ageRating": "15",
+    "description": "Example description...",
+    "image": "https://image.example.com",
+    "imageTitle": "Derry Girls"
+  },
+  {
+    "name": "Young Royals",
+    "type": "Series",
+    "genre": "Young Adult, Romance",
+    "streaming": "Netflix",
+    "ageRating": "15",
+    "description": "Example description...",
+    "image": "https://image.example.com",
+    "imageTitle": "Young Royals"
   }
 ]

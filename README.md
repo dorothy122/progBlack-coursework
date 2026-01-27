@@ -13,7 +13,7 @@
 
 **Parameters** -  None
 
-**Success Response** - Sends data from info.json as an array
+**Success Response** - Sends data from items.json as json content
 
 **Example Response** - Example of part of the response, sends this data for all items in the file so that the images can all be displayed on the page and filtered.
 [
@@ -47,7 +47,7 @@
 # GET /list/:title
 **Endpoint url** (example for movie Little Women): http://localhost:8090/list/Little%20Women
 
-**Description** - Fetches all data for a specific item given its title (searches info.json to fine the correspondibg item)
+**Description** - Fetches all data for a specific item given its title (searches items.json to fine the correspondibg item)
 
 **Method** - GET
 
@@ -73,7 +73,7 @@
 # POST /list/add
 endpoint url: http://localhost:8090/list/add
 
-**description** - Takes in the inputs from the form and adds these to a new item in info.json
+**description** - Takes in the inputs from the form and adds these to a new item in items.json
 
 **method** - POST
 
@@ -96,4 +96,31 @@ endpoint url: http://localhost:8090/list/add
 - 500 server error -> server down or does not exist. 
 - 400 bad request -> form has invalid or missing fields 
 - 400 duplicate item added -> "Item with this title already exists"
+
+
+
+# GET /genres
+**Endpoint url:** http://localhost:8090/genres
+
+**Description** - Fetches the content of the genres.json file including both the id and name of all genres.
+
+**Method** - GET
+
+**Parameters** -  None
+
+**Success Response** - Sends data from genres.json as json content. Sends status 200,
+
+**Example Response** - Part of the file:
+[
+    {
+        "id": "drama", "name": "Drama"
+    },
+    {
+        "id": "comedy", "name": "Comedy"
+    }
+]
+
+
+**Errors** - 500 server error -> server down or does not exist. Displays "Server unavailable. Please try again later" to user.
+
 

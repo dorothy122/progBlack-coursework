@@ -26,7 +26,7 @@
 // 14. DONE API documentation
 // 15. DONE display server errors to user
 // 16. DONE watch the testing lectures
-// 17. do the testing stuff
+// 17. DONE do the testing stuff
 // 18. make video 
 // 19. DONE prevent being able to add duplicate
 // 20. DONE genres entity
