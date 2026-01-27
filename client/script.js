@@ -1,5 +1,7 @@
 // TO DO //
 
+
+
 // 1. make images appear in bootstrap columns - needs editting - 6 columns over lap for certain window size
 // 2. DONE send only image info, type, title, streaming platforms 
 // 3. DONE filter movie/tv show 
@@ -23,10 +25,15 @@
 // 13.5 DONE display error next to field to fill
 // 14. DONE API documentation
 // 15. DONE display server errors to user
-// 16. watch the testing lectures
+// 16. DONE watch the testing lectures
 // 17. do the testing stuff
 // 18. make video 
 // 19. DONE prevent being able to add duplicate
+// 20. DONE genres entity
+// 21. DONE add genre filters
+// 22. DONE genre fetch
+// 23. DONE form genre dropdown
+// 24. add new genre?
 
 
 
@@ -34,6 +41,7 @@
 
 // to gloablly store main info for items
 let allData = []
+let allGenres = []
 
 // globally store movie/series filters
 let movies = true
@@ -43,6 +51,9 @@ let series = true
 let filters = {
   netflix:true, prime:true, disney:true, iplayer:true, all4:true, itvx:true, amazonRent:true
 }
+
+// globally store state of each genre filter
+let selectedGenres = new Set()
 
 
 // load all images when page loads 
@@ -95,6 +106,16 @@ window.addEventListener('DOMContentLoaded', function(event){
     this.document.getElementById("itvxSwitch").checked = true
     this.document.getElementById("primeSwitch").checked = true
 
+
+    // reset genres
+    for(genre of allGenres) {
+      selectedGenres.add(genre.id)
+      this.document.getElementById(`${genre.id}Switch`).checked = true
+    }
+
+
+
+
     applyFilters(allData)
   })
 
@@ -106,26 +127,26 @@ window.addEventListener('DOMContentLoaded', function(event){
 
 
   // manually update platform filter states
-  document.getElementById("netflix").addEventListener("click", () => {
-    filters.netflix = !filters.netflix
+  document.getElementById("netflixSwitch").addEventListener("change", (e) => {
+    filters.netflix = e.target.checked
   })
-  document.getElementById("prime").addEventListener("click", () => {
-    filters.prime = !filters.prime
+  document.getElementById("primeSwitch").addEventListener("change", (e) => {
+    filters.prime = e.target.checked
   })
-  document.getElementById("disney").addEventListener("click", () => {
-    filters.disney = !filters.disney
+  document.getElementById("disneySwitch").addEventListener("change", (e) => {
+    filters.disney = e.target.checked
   })
-  document.getElementById("iplayer").addEventListener("click", () => {
-    filters.iplayer = !filters.iplayer
+  document.getElementById("iplayerSwitch").addEventListener("change", (e) => {
+    filters.iplayer = e.target.checked
   })  
-  document.getElementById("all4").addEventListener("click", () => {
-    filters.all4 = !filters.all4
+  document.getElementById("all4Switch").addEventListener("change", (e) => {
+    filters.all4 = e.target.checked
   })
-  document.getElementById("itvx").addEventListener("click", () => {
-    filters.itvx = !filters.itvx
+  document.getElementById("itvxSwitch").addEventListener("change", (e) => {
+    filters.itvx = e.target.checked
   })
-  document.getElementById("amazonRent").addEventListener("click", () => {
-    filters.amazonRent = !filters.amazonRent
+  document.getElementById("amazonRentSwitch").addEventListener("change", (e) => {
+    filters.amazonRent = e.target.checked
   })
 
 
@@ -171,17 +192,26 @@ window.addEventListener('DOMContentLoaded', function(event){
   form.addEventListener("submit", async function(event) {
     event.preventDefault() // stop page reloading
 
-
     // store inputs: https://www.geeksforgeeks.org/javascript/how-to-get-the-value-of-text-input-field-using-javascript/
     const newItem = {
       name: document.getElementById("titleInput").value,
       type: document.getElementById("typeInput").value,
-      genre: document.getElementById("genreInput").value,
+      //genre: document.getElementById("genreInput").value,
       streaming: document.getElementById("platformInput").value,
       ageRating: document.getElementById("ageRatingInput").value,
       description: document.getElementById("descriptionInput").value,
       image: document.getElementById("imageInput").value,
       imageTitle: document.getElementById("titleInput").value,
+
+      genre: Array.from(
+        document.querySelectorAll("#genreInputDropdown input:checked")
+      ).map(input =>
+        input.id.replace("form-", "").replace("Switch", "")
+      )
+      // due to multiselect, .value doesnt work in same way
+      // need to split genres given up into same format as stored in items.json
+      // would before look like <input id="form-comedy" checked> for every checked item 
+
     }
 
     // validate form
@@ -204,12 +234,12 @@ window.addEventListener('DOMContentLoaded', function(event){
       clearError(typeInput)
     }
 
-    if (newItem.genre == "") {
-      showError(genreInput)
+    if (newItem.genre.length == 0) {
+      showGenreError()
       valid = false
     }
     else {
-      clearError(genreInput)
+      clearGenreError()
     }
 
     if (newItem.streaming == "") {
@@ -273,7 +303,133 @@ window.addEventListener('DOMContentLoaded', function(event){
     }
   })
 
+
+  // fetch all genres, build genre filters and form options
+  fetch('/genres')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Server returned status " + response.status);
+      }
+      return response.json();
+    })
+
+
+    .then(data => {
+      // no server error
+      serverHideError()
+      // gloablly store data
+      allGenres = data
+
+      // run function to create genres filters and form dropdown
+      buildGenreFilters(allGenres)
+
+      buildGenreForm(allGenres)
+
+
+      
+    })
+
+    // display error if unable to fetch
+    .catch(error => {
+      serverErrorShow("Server unavailable. Please try again later")
+    })
+
+
 })
+
+
+function buildGenreForm(genres) {
+  // form dropdown 
+  const dropdown = document.getElementById("genreInputDropdown")
+
+  // loop through each genre
+  for (const genre of genres) {
+    // create space to put a filter
+    const option = document.createElement("div")
+    option.className = "form-check form-switch"
+    option.id = genre.id
+
+    // create toggle
+    const toggle = document.createElement("input")
+    toggle.className = "form-check-input"
+    toggle.type = "checkbox"
+    toggle.id = `form-${genre.id}Switch`
+    toggle.checked = false
+
+    // create toggle label
+    const label = document.createElement("label")
+    label.className = "form-check-label"
+    label.htmlFor = toggle.id
+    label.textContent = genre.name
+
+    // add all parts to the item
+    option.appendChild(toggle)
+    option.appendChild(label)
+    dropdown.appendChild(option)
+
+
+
+  }
+
+}
+
+
+
+
+// build genre filters
+function buildGenreFilters(genres) {
+  // navbar filters
+  const container = document.getElementById("genreFilters")
+  container.innerHTML = "" // clear current filters
+
+
+  // loop through each genre
+  for (const genre of genres) {
+    // add to selected genres by default
+    selectedGenres.add(genre.id)
+
+    // create space to put a filter
+    const filter = document.createElement("div")
+    filter.className = "form-check form-switch"
+    filter.id = genre.id
+
+    // create toggle
+    const toggle = document.createElement("input")
+    toggle.className = "form-check-input"
+    toggle.type = "checkbox"
+    toggle.id = `${genre.id}Switch`
+    toggle.checked = true
+
+    // create toggle label
+    const label = document.createElement("label")
+    label.className = "form-check-label"
+    label.htmlFor = toggle.id
+    label.textContent = genre.name
+
+    // add all parts to the item
+    filter.appendChild(toggle)
+    filter.appendChild(label)
+    container.appendChild(filter)
+
+    // add eventlistener for the check box
+    toggle.addEventListener("change", () => {
+      if (toggle.checked) {
+        selectedGenres.add(genre.id)
+      }
+      else {
+        selectedGenres.delete(genre.id)
+      }
+    })
+
+    button = document.getElementById("genreFilter")
+    button.addEventListener("click", () => {
+      // update images shown
+      applyFilters(allData)
+    })
+
+  
+  }
+}
 
 
 // display error if not filled
@@ -284,6 +440,25 @@ function showError(input) {
 // remove error if filled
 function clearError(input) {
   input.classList.remove("is-invalid")
+}
+
+// specific for genre as differen type
+function showGenreError() {
+  const wrapper = document.getElementById("genreInputWrapped")
+  const button = wrapper.querySelector("button")
+  const feedback = document.getElementById("genreFeedback")
+
+  button.classList.add("is-invalid")
+  feedback.style.display = "block"
+}
+
+function clearGenreError() {
+  const wrapper = document.getElementById("genreInputWrapped")
+  const button = wrapper.querySelector("button")
+  const feedback = document.getElementById("genreFeedback")
+
+  button.classList.remove("is-invalid")
+  feedback.style.display = "none"
 }
 
 
@@ -517,8 +692,21 @@ function applyFilters(data) {
       available = true
     }
 
+
+
+    // apply genre filters
+    availableGenre = false
+    for (let j=0; j < data[i].genre.length; j++) {
+      let genre = data[i].genre[j]
+
+      if (selectedGenres.has(genre)) {
+        availableGenre = true
+      }
+    }
+
+
     // if not available, remove item from data
-    if (available == true && availableType == true) {
+    if (available == true && availableType == true && availableGenre == true) {
       filteredData.push(data[i])
     }
   }

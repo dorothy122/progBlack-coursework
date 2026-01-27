@@ -27,7 +27,8 @@ app.get('/list', function(req, resp) {
         type: item.type,
         streaming: item.streaming,
         image: item.image,
-        imageTitle: item.imageTitle
+        imageTitle: item.imageTitle,
+        genre: item.genre
 
     }));
     // map function use: https://www.w3tutorials.net/blog/nodejs-filter-map/#the-map-method
@@ -35,6 +36,15 @@ app.get('/list', function(req, resp) {
     resp.status(200).json(summary);
 
 });
+
+
+// send genres to script.js
+app.get('/genres', function(req, resp) {
+    
+    resp.status(200).json(genres);
+
+});
+
 
 
 // send specific info 
@@ -61,7 +71,7 @@ app.post("/list/add", function(req, resp) {
         info.push(req.body)
 
         // add to json file
-        fs.writeFileSync("./info.json", JSON.stringify(info, null, 2))
+        fs.writeFileSync("./items.json", JSON.stringify(info, null, 2))
 
         // send message back to say its been added
         resp.send("Thank you, your item has been added to the page")

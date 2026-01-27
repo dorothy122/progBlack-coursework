@@ -307,14 +307,28 @@
   },
   {
     "name": "helo",
-    "type": "Movie",
-    "streaming": "Netflix, All4",
+    "type": "TV",
+    "streaming": "Netflix",
     "ageRating": "15",
     "description": "hello",
     "image": "https://pics.filmaffinity.com/derry_girls-448454269-large.jpg",
     "imageTitle": "helo",
     "genre": [
-      "drama"
+      "comedy",
+      "comingOfAge"
+    ]
+  },
+  {
+    "name": "hello",
+    "type": "Movie",
+    "streaming": "Netflix",
+    "ageRating": "12",
+    "description": "hello",
+    "image": "https://pics.filmaffinity.com/derry_girls-448454269-large.jpg",
+    "imageTitle": "hello",
+    "genre": [
+      "comedy",
+      "lgbtq"
     ]
   }
 ]
