@@ -1,19 +1,18 @@
 [
-   {
+  {
     "name": "Little Women",
     "type": "Movie",
-    "genre": "Hisotrical, Coming-of-age, Book Adaptation",
+    "genre": ["historical, comingOfAge, bookAdaptation"],
     "streaming": "Netflix, Amazon To Rent",
     "ageRating": "12",
     "description": "Determined to make her own way in the 1860s, a writer looks back at the tough yet tender times spent with her three spriited sisters and a close friend",
     "imageTitle": "Little Women",
     "image": "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/219778/LW_OnLine_6072x9000_FNL_XMAS_Lk_03.jpg"
   },
-
   {
     "name": "People We Meet On Vacation",
     "type": "Movie",
-    "genre": "Romance, Comedy, Book Adaptation",
+    "genre": ["romance, comedy, bookAdaptation"],
     "streaming": "Netflix",
     "ageRating": "12",
     "description": "Based on Emily Henry's book, total opposites Poppy and Alex grow closer over years of summer travels - until one trip changes everything.",
@@ -23,7 +22,7 @@
   {
     "name": "Pitch Perfect",
     "type": "Movie",
-    "genre": "Comedy, Musical",
+    "genre": ["comedy, musical"],
     "streaming": "Netflix, Amazon To Rent",
     "ageRating": "12",
     "description": "It's a musical showdown when Beca joins an accapella group and revamps their stodgy style to take on a university competition",
@@ -33,7 +32,7 @@
   {
     "name": "The Salt Path",
     "type": "Movie",
-    "genre": "Biographical, Drama, Book Adaptation",
+    "genre": ["biographical, drama, bookAdaptation"],
     "streaming": "Amazon Prime",
     "ageRating": "12",
     "description": "Based on Raynor Winn's bestseller, The Salt Path tells the emotional and life-affirming story of a couple whose connection with the natural world helps them overcome challenges and ultimately reconnect with one another",
@@ -43,7 +42,7 @@
   {
     "name": "Bottoms",
     "type": "Movie",
-    "genre": "Comedy, LGBTQ+, Young Adult",
+    "genre": ["comedy, lgbtq, youngAdult"],
     "streaming": "Amazon Prime",
     "ageRating": "15",
     "description": "In this refreshingly outspoken and raunchy comedy, two unpopular girls in their senior year of high school start a fight club to try to impress and hook up with cheerleaders. But are they in over their heads?",
@@ -53,7 +52,7 @@
   {
     "name": "Final Destination 1",
     "type": "Movie",
-    "genre": "Horror",
+    "genre": ["horror"],
     "streaming": "Amazon Prime",
     "ageRating": "15",
     "description": "When a teenager has a premonition that the plane he's about to board is going to explode, he throws a fit and gets him and his friends kicked off it. Shockingly, the plane crashes. As the group begins to die mysteriously one by one, the remaining survivors must try to figure out what is going on before they join the other victims.",
@@ -63,7 +62,7 @@
   {
     "name": "The Avengers",
     "type": "Movie",
-    "genre": "Super Hero, Action",
+    "genre": ["action"],
     "streaming": "Disney+, Amazon To Rent",
     "ageRating": "12",
     "description": "Marvel makes cinematic history as the Super Hero team of a lifetime assemble for the first time ever in this action-packed blockbuster! Packed with spectacular visual effects, Marvel's The Avengers will blow your mind!",
@@ -73,7 +72,7 @@
   {
     "name": "Twilight",
     "type": "Movie",
-    "genre": "Fantasy, Romance, Book Adaptation",
+    "genre": ["fantasy, romance, bookAdaptation"],
     "streaming": "Disney+, Amazon Prime",
     "ageRating": "12",
     "description": "A teenage girl falls for a mysterious classmate with a possibly deadly secret.",
@@ -83,7 +82,7 @@
   {
     "name": "Shrek",
     "type": "Movie",
-    "genre": "Action, Comedy, Kids",
+    "genre": ["action, comedy, kids"],
     "streaming": "Disney+, Amazon Prime",
     "ageRating": "PG",
     "description": "A grouchy ogre and his jabbering donkey sidekick set out to rescue an imprisoned princess.",
@@ -93,7 +92,7 @@
   {
     "name": "The Hunger Games",
     "type": "Movie",
-    "genre": "Action, Dystopian, Young Adult, Book Adaptation",
+    "genre": ["action, dystopian, youngAdult, bookAdaptation"],
     "streaming": "Amazon Prime, IPlayer",
     "ageRating": "12",
     "description": "In a dystopian future, Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games, a televised fight to the death in which two teenagers from each of the twelve Districts of Panem compete until only 1 survives. Katniss is forced to rely on her sharp instincts and the mentorship of former victor Haymitch Abernathy.",
@@ -103,7 +102,7 @@
   {
     "name": "Paddington",
     "type": "Movie",
-    "genre": "Comedy, Kids, Adventure, Book Adaptation",
+    "genre": ["comedy, kids, adventure, bookAdaptation"],
     "streaming": "Amazon Prime, IPlayer",
     "ageRating": "PG",
     "description": "A young Peruvian bear with a passion for all things British travels to London in search of a home.",
@@ -113,7 +112,7 @@
   {
     "name": "Bridgerton",
     "type": "TV",
-    "genre": "Historical, Romance, Book Adaptation",
+    "genre": ["historical, romance, bookAdaptation"],
     "streaming": "Netflix",
     "ageRating": "15",
     "description": "The eight close-knit siblings of the nobles and powerful Bridgerton family navigate London high socirty in search of love, surrounded by friends and rivals alike.",
@@ -123,7 +122,7 @@
   {
     "name": "Taskmaster",
     "type": "TV",
-    "genre": "Comedy, Gameshow",
+    "genre": ["comedy, gameshow"],
     "streaming": "Netflix, All4",
     "ageRating": "15",
     "description": "In this British comedy panel game show, a group of 5 celebrities compete in a series of bizarre and creative tasks, judged by the Taskmaster, Greg Davies, and his assistant, Alex Horne. ",
@@ -133,7 +132,7 @@
   {
     "name": "Motherland",
     "type": "TV",
-    "genre": "Comedy",
+    "genre": ["comedy"],
     "streaming": "IPlayer, Netflix",
     "ageRating": "15",
     "description": "It's a mum-eat-mum world. The brave women and men of the school run come face to face with playdate politics, the PTA's reign of terror and never having a pee by yourself.",
@@ -143,7 +142,7 @@
   {
     "name": "House M.D.",
     "type": "TV",
-    "genre": "Drama",
+    "genre": ["drama"],
     "streaming": "Netflix, Amazon Prime",
     "ageRating": "15",
     "description": "Using a crack team of doctors and his wits, an antisocial maverick doctor specializing in diagnostic medicine does whatever it takes to solve puzzling cases that come his way.",
@@ -153,7 +152,7 @@
   {
     "name": "The Summer I Turned Pretty",
     "type": "TV",
-    "genre": "Young Adult, Romance, Book Adaptation",
+    "genre": ["youngAdult, romance, bookAdaptation"],
     "streaming": "Amazon Prime",
     "ageRating": "15",
     "description": "A love triangle between one girl and two brothers. A story about first love, first heartbreak, and the magic of that one perfect summer.",
@@ -163,7 +162,7 @@
   {
     "name": "Fleabag",
     "type": "TV",
-    "genre": "Comedy",
+    "genre": ["comedy"],
     "streaming": "Amazon Prime",
     "ageRating": "15",
     "description": "Meet Fleabag. She's not talking to all of us - she's talking to you. So why don't you pop your top off and come right in?",
@@ -173,7 +172,7 @@
   {
     "name": "Daisy Jones and the Six",
     "type": "TV",
-    "genre": "Historical, Romance, Book Adaptation",
+    "genre": ["historical, romance, bookAdaptation"],
     "streaming": "Amazon Prime",
     "ageRating": "15",
     "description": "In 1977, Daisy Jones & The Six were on top of the world. Fronted by two heat seeking missiles, the band had risen from obscurity to fame. And then, after a sold-out show at Chicago's Soldier Field, they called it quits. Now, decades later, the band members finally agree to reveal the truth. This is the story of how an iconic band imploded at the height of its powers.",
@@ -183,7 +182,7 @@
   {
     "name": "Peppa Pig",
     "type": "TV",
-    "genre": "Kids",
+    "genre": ["kids"],
     "streaming": "Amazon Prime, Disney+, IPlayer",
     "ageRating": "U",
     "description": "Peppa Pig is a loveable, cheeky little piggy who lives with her little brother George, Mummy Pig and Daddy Pig. Peppa's favourite things include playing games, dressing up, days out and jumping in muddy puddles. Her adventures always end happily with loud snorts of laughter!",
@@ -193,7 +192,7 @@
   {
     "name": "Downton Abbey",
     "type": "TV",
-    "genre": "Historical, Drama",
+    "genre": ["historical, drama"],
     "streaming": "Disney+, Netflix, ITVX, Amazon Prime",
     "ageRating": "12",
     "description": "The Downton Abbey estate stands a splendid example of confidence and mettle, its family enduring for generations and its staff a well-oiled machine of propriety. But change is afoot at Downton - change far surpassing the new electric lights and telephone",
@@ -203,7 +202,7 @@
   {
     "name": "Normal People",
     "type": "TV",
-    "genre": "Romance, Drama, Coming-of-age, Book Adaptation",
+    "genre": ["romance, drama, comingOfAge, bookAdaptation"],
     "streaming": "Disney+, Netlfix, IPlayer",
     "ageRating": "15",
     "description": "The electricity of first love between two people who changed each other’s lives. Based on Sally Rooney’s best-selling novel.",
@@ -213,7 +212,7 @@
   {
     "name": "Bluey",
     "type": "TV",
-    "genre": "Kids",
+    "genre": ["kids"],
     "streaming": "Disney+, IPlayer",
     "ageRating": "U",
     "description": "Bluey follows the adventures of a lovable and inexhaustible six-year-old Blue Heeler puppy who lives with her dad, mum and four-year-old little sister, Bingo.",
@@ -223,7 +222,7 @@
   {
     "name": "The Traitors UK",
     "type": "TV",
-    "genre": "Game show",
+    "genre": ["gameshow"],
     "streaming": "IPlayer",
     "ageRating": "15",
     "description": "Get them before they get you. 22 people, one castle, £120k - Claudia Winkleman hosts the ultimate reality game of trust and treachery. Let the mind games begin.",

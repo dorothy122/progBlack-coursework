@@ -12,7 +12,9 @@ app.use(express.json())
 
 
 // load the info about the movies and tv programs  
-const info = require('./info.json');
+const info = require('./items.json');
+// load genre info
+const genres = require("./genres.json")
 
 
 
@@ -45,7 +47,7 @@ app.get('/list/:title', function(req, resp) {
         resp.status(200).json(item)
     }
     else {
-        resp.status(400).json({error: "No content for this item"})
+        resp.status(400).send("No content for this item")
     }
 })
 

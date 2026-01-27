@@ -1,0 +1,50 @@
+[
+    {
+        "id": "drama", "name": "Drama"
+    },
+    {
+        "id": "comedy", "name": "Comedy"
+    },
+    {
+        "id": "historical", "name": "Historical"
+    },
+    {
+        "id": "comingOfAge", "name": "Coming of Age"
+    },
+    {
+        "id": "bookAdaptation", "name": "Book Adaptation"
+    },
+    {
+        "id": "musical", "name": "Musical"
+    },
+    {
+        "id": "biographical", "name": "biographical"
+    },
+    {
+        "id": "youngAdult", "name": "Young Adult"
+    },
+    {
+        "id": "lgbtq", "name": "LGBTQ+"
+    },
+    {
+        "id": "horror", "name": "Horror"
+    },
+    {
+        "id": "action", "name": "Action"
+    },
+    {
+        "id": "fantasy", "name": "Fantasy"
+    },
+    {
+        "id": "kids", "name": "Kids"
+    },
+    {
+        "id": "dystopian", "name": "Dystopian"
+    },
+    {
+        "id": "adventure", "name": "Adventure"
+    },
+    {
+        "id": "gameshow", "name": "Gameshow"
+    }
+]
