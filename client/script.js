@@ -1,42 +1,3 @@
-// TO DO //
-
-
-
-// 1. make images appear in bootstrap columns - needs editting - 6 columns over lap for certain window size
-// 2. DONE send only image info, type, title, streaming platforms 
-// 3. DONE filter movie/tv show 
-// 3.5 DONE add styling to navbar buttons BUT DONT REALLY LIKE THAT MUCH
-// 4. DONE add streaming platform drop down to navbar (instead of search)
-// 4.5 DONE filter streaming platforms
-// 5. DONE on click of image, enlarge to show extra info
-// 6. DONE send additional info on click of image 
-// 7. DONE make overlay scroll with page
-// 8. DONE make server start with npm start
-// 9. DONE reset all filters when click home
-// 10. DONE remove overlay when click on filters
-
-// 11. DONE fix json typos and inconsitencies
-// 12. DONE change POST to GET single item
-// 13. DONE add POST to add new item 
-// 13.1 DONE add form at bottom page to insert data to add NEEDS CSS
-// 13.2 DONE send form data to server POST
-// 13.3 DONE server add recieved data to JSON file + refetch this file
-// 13.4 DONE display errors if not all entered
-// 13.5 DONE display error next to field to fill
-// 14. DONE API documentation
-// 15. DONE display server errors to user
-// 16. DONE watch the testing lectures
-// 17. DONE do the testing stuff
-// 18. make video 
-// 19. DONE prevent being able to add duplicate
-// 20. DONE genres entity
-// 21. DONE add genre filters
-// 22. DONE genre fetch
-// 23. DONE form genre dropdown
-// 24. add new genre?
-
-
-
 
 
 // to gloablly store main info for items
@@ -55,6 +16,13 @@ let filters = {
 // globally store state of each genre filter
 let selectedGenres = new Set()
 
+// gloablly store map between game id and name
+let genreMap = {}
+
+
+/////////////////////////////
+// fetch all items summary //
+////////////////////////////
 
 // load all images when page loads 
 window.addEventListener('DOMContentLoaded', function(event){
@@ -81,6 +49,11 @@ window.addEventListener('DOMContentLoaded', function(event){
     .catch(error => {
       serverErrorShow("Server unavailable. Please try again later")
     })
+
+
+  ///////////////////
+  // apply filters //
+  //////////////////
 
 
   // filter movies
@@ -114,8 +87,6 @@ window.addEventListener('DOMContentLoaded', function(event){
     }
 
 
-
-
     applyFilters(allData)
   })
 
@@ -123,7 +94,6 @@ window.addEventListener('DOMContentLoaded', function(event){
   // apply streaming platform filters
   const platformFilterButton = this.document.getElementById("platformFilter")
   platformFilterButton.addEventListener('click', () => {applyFilters(allData)})
-
 
 
   // manually update platform filter states
@@ -150,6 +120,11 @@ window.addEventListener('DOMContentLoaded', function(event){
   })
 
 
+  /////////////////////////////////////
+  // build cards when click on image //
+  /////////////////////////////////////
+
+
   // when click on image, fetch additional info for this item
   this.document.getElementById("content").addEventListener("click", (event) => {
     if (event.target.tagName == "IMG") {
@@ -174,20 +149,26 @@ window.addEventListener('DOMContentLoaded', function(event){
         // ensure no error displayed
         serverHideError()
         // create card
-        let newCard = card(data)
+        const formattedData = formatGenres(data)
+        let newCard = card(formattedData)
         // add to overlay
         overlay(newCard, image)
       })
 
       // display error if unable to fetch
       .catch(error => {
-        serverErrorShow(error.message || "Server unavailable. Please try again later")
+        serverErrorShow("Server unavailable. Please try again later")
       })
 
     }
   })
 
-  // form sumbit
+
+  /////////////////
+  // form sumbit //
+  /////////////////
+
+
   const form = document.getElementById("form")
   form.addEventListener("submit", async function(event) {
     event.preventDefault() // stop page reloading
@@ -286,9 +267,10 @@ window.addEventListener('DOMContentLoaded', function(event){
 
       .then(resp => {
         if (!resp.ok) {
-          throw new Error("Failed to add")
-        }
-        return resp.text()
+          return resp.text().then(msg => {
+          throw new Error(msg)
+        })
+      }
       })
       
       .then(msg => {
@@ -297,14 +279,23 @@ window.addEventListener('DOMContentLoaded', function(event){
       })
 
       .catch(error => {
-        serverErrorShow("cannot add item - server not running")
+        if (error.message == "Item with this title already exists") {
+          serverErrorShow(error.message)
+        }
+        else {
+          serverErrorShow("cannot add item - server not running")
+        }
       })
 
     }
   })
 
+  //////////////////////
+  // fetch all genres //
+  //////////////////////
 
-  // fetch all genres, build genre filters and form options
+
+  // build genre filters and form options
   fetch('/genres')
     .then(response => {
       if (!response.ok) {
@@ -314,19 +305,21 @@ window.addEventListener('DOMContentLoaded', function(event){
     })
 
 
-    .then(data => {
+    .then(genres => {
       // no server error
       serverHideError()
       // gloablly store data
-      allGenres = data
+      allGenres = genres
+
+      // map genre ids to genre name (so can be displayed to user)
+      for (const genre of genres) {
+        genreMap[genre.id] = genre.name
+      }
 
       // run function to create genres filters and form dropdown
       buildGenreFilters(allGenres)
 
-      buildGenreForm(allGenres)
-
-
-      
+      buildGenreForm(allGenres)  
     })
 
     // display error if unable to fetch
@@ -337,6 +330,9 @@ window.addEventListener('DOMContentLoaded', function(event){
 
 })
 
+///////////////////////////
+// build form components //
+///////////////////////////
 
 function buildGenreForm(genres) {
   // form dropdown 
@@ -374,6 +370,43 @@ function buildGenreForm(genres) {
 }
 
 
+// form errors //
+
+
+// display error if not filled
+function showError(input) {
+  input.classList.add("is-invalid")
+}
+
+// remove error if filled
+function clearError(input) {
+  input.classList.remove("is-invalid")
+}
+
+// specific for genre as differen type
+function showGenreError() {
+  const wrapper = document.getElementById("genreInputWrapped")
+  const button = wrapper.querySelector("button")
+  const feedback = document.getElementById("genreFeedback")
+
+  button.classList.add("is-invalid")
+  feedback.style.display = "block"
+}
+
+function clearGenreError() {
+  const wrapper = document.getElementById("genreInputWrapped")
+  const button = wrapper.querySelector("button")
+  const feedback = document.getElementById("genreFeedback")
+
+  button.classList.remove("is-invalid")
+  feedback.style.display = "none"
+}
+
+
+
+/////////////////////////////
+// build filter components //
+/////////////////////////////
 
 
 // build genre filters
@@ -432,54 +465,115 @@ function buildGenreFilters(genres) {
 }
 
 
-// display error if not filled
-function showError(input) {
-  input.classList.add("is-invalid")
+
+// apply any filter changes 
+function applyFilters(data) {
+  // store available items
+  let filteredData = []
+
+  // loop through each item in data
+  for (let i = 0; i < data.length; i++) {
+    let available = false
+    let availableType = false
+
+    // check movie and tv fiter status
+    if (movies == true && data[i].type == "Movie") {
+      availableType = true
+    }
+    else if (series == true && data[i].type == "TV") {
+      availableType = true
+    }
+
+    // for each platform filter, check if current item is on that streaming platform
+    if (filters.netflix == true && data[i].streaming.includes("Netflix")) {
+      available = true
+    }
+
+    if (filters.prime == true && data[i].streaming.includes("Amazon Prime")) {
+      available = true
+    }
+
+    if (filters.disney == true && data[i].streaming.includes("Disney+")) {
+      available = true
+    }
+
+    if (filters.all4 == true && data[i].streaming.includes("All4")) {
+      available = true
+    }
+
+    if (filters.iplayer == true && data[i].streaming.includes("IPlayer")) {
+      available = true
+    }
+
+    if (filters.itvx == true && data[i].streaming.includes("ITVX")) {
+      available = true
+    }
+
+
+    if (filters.amazonRent == true && data[i].streaming.includes("Amazon To Rent")) {
+      available = true
+    }
+
+
+
+    // apply genre filters
+    availableGenre = false
+    for (let j=0; j < data[i].genre.length; j++) {
+      let genre = data[i].genre[j]
+
+      if (selectedGenres.has(genre)) {
+        availableGenre = true
+      }
+    }
+
+
+    // if not available, remove item from data
+    if (available == true && availableType == true && availableGenre == true) {
+      filteredData.push(data[i])
+    }
+  }
+
+  // display available items
+  displayImage(filteredData)
 }
 
-// remove error if filled
-function clearError(input) {
-  input.classList.remove("is-invalid")
-}
 
-// specific for genre as differen type
-function showGenreError() {
-  const wrapper = document.getElementById("genreInputWrapped")
-  const button = wrapper.querySelector("button")
-  const feedback = document.getElementById("genreFeedback")
 
-  button.classList.add("is-invalid")
-  feedback.style.display = "block"
-}
-
-function clearGenreError() {
-  const wrapper = document.getElementById("genreInputWrapped")
-  const button = wrapper.querySelector("button")
-  const feedback = document.getElementById("genreFeedback")
-
-  button.classList.remove("is-invalid")
-  feedback.style.display = "none"
-}
+///////////////////////////
+// display server errors //
+///////////////////////////
 
 
 // server disconnect errors
 function serverErrorShow(message) {
+  // add error to error box
   const errorBox = document.getElementById("error")
   errorBox.textContent = message
   errorBox.classList.remove("d-none")
 }
 
 function serverHideError() {
+  // clear error box
   const errorBox = document.getElementById("error")
   errorBox.classList.add("d-none")
 }
 
 
 
+/////////////////////////////
+// create and format cards //
+/////////////////////////////
+
+
+// format genres so name shown not id
+function formatGenres(data) {
+  return {...data, genre: data.genre.map(id => genreMap[id]).join(", ")}
+}
 
 
 // on click of image, enlarge image and display additional info
 function card(data, image) {
+  
   const content = document.getElementById("content")
 
   // bootstrap card and list groups from bootstrap documentation: https://getbootstrap.com/docs/4.0/components/card/
@@ -644,77 +738,9 @@ function overlay(card, image) {
 }
 
 
-// apply any filter changes 
-function applyFilters(data) {
-  // store available items
-  let filteredData = []
-
-  // loop through each item in data
-  for (let i = 0; i < data.length; i++) {
-    let available = false
-    let availableType = false
-
-    // check movie and tv fiter status
-    if (movies == true && data[i].type == "Movie") {
-      availableType = true
-    }
-    else if (series == true && data[i].type == "TV") {
-      availableType = true
-    }
-
-    // for each platform filter, check if current item is on that streaming platform
-    if (filters.netflix == true && data[i].streaming.includes("Netflix")) {
-      available = true
-    }
-
-    if (filters.prime == true && data[i].streaming.includes("Amazon Prime")) {
-      available = true
-    }
-
-    if (filters.disney == true && data[i].streaming.includes("Disney+")) {
-      available = true
-    }
-
-    if (filters.all4 == true && data[i].streaming.includes("All4")) {
-      available = true
-    }
-
-    if (filters.iplayer == true && data[i].streaming.includes("IPlayer")) {
-      available = true
-    }
-
-    if (filters.itvx == true && data[i].streaming.includes("ITVX")) {
-      available = true
-    }
-
-
-    if (filters.amazonRent == true && data[i].streaming.includes("Amazon To Rent")) {
-      available = true
-    }
-
-
-
-    // apply genre filters
-    availableGenre = false
-    for (let j=0; j < data[i].genre.length; j++) {
-      let genre = data[i].genre[j]
-
-      if (selectedGenres.has(genre)) {
-        availableGenre = true
-      }
-    }
-
-
-    // if not available, remove item from data
-    if (available == true && availableType == true && availableGenre == true) {
-      filteredData.push(data[i])
-    }
-  }
-
-  // display available items
-  displayImage(filteredData)
-}
-
+//////////////////////////////////
+// display content on page load //
+//////////////////////////////////
 
 
 // display the image content  
@@ -765,7 +791,6 @@ function displayImage(data) {
   // construct the container
   container.appendChild(row);
   content.appendChild(container)
-
 
 }
 

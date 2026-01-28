@@ -86,7 +86,7 @@ describe("Test the service", () => {
         const params = {
             "name": "Derry Girls",
             "type": "Series",
-            "genre": "Comedy",
+            "genre": ["Comedy"],
             "streaming": "Netflix",
             "ageRating": "15",
             "description": "Example description...",
@@ -105,7 +105,7 @@ describe("Test the service", () => {
         const params = {
             "name": "Young Royals",
             "type": "Series",
-            "genre": "Young Adult, Romance",
+            "genre": ["Young Adult", "Romance"],
             "streaming": "Netflix",
             "ageRating": "15",
             "description": "Example description...",

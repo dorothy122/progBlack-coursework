@@ -130,3 +130,8 @@ endpoint url: http://localhost:8090/list/add
 **Errors** - 500 server error -> server down or does not exist. Displays "Server unavailable. Please try again later" to user.
 
 
+
+## No image are my own. 
+**Image links in items.json for image owners. This would be changed in event of actual release.**
+
+
